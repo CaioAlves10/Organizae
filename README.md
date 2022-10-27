@@ -1,1 +1,1 @@
-# Organizae-PicPay
+# Organizae
