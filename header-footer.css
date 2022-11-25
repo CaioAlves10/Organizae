@@ -13,7 +13,11 @@ body {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: white;
+}
+
+ul {
+    list-style: none;
 }
 
 /* Header */
@@ -32,7 +36,6 @@ a {
     display: flex;
     align-items: center;
     gap: 4rem;
-    list-style: none;
 }
 
 /* #menu li:last-child {
@@ -49,8 +52,47 @@ a {
     align-items: center;
 
     background-color: #004AAD;
-    color: white;
     font-weight: bold;
     padding: 0.7rem 1.6rem;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
+}
+
+/* Footer */
+
+footer {
+    background: #145DA0;
+    height: 16rem;
+    padding: 3rem 10rem;
+    color: white;
+}
+
+footer #rodape {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 4rem;
+}
+
+#linksFooter {
+    display: flex;
+    gap: 9rem;
+}
+
+.titleFooter {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#rodape img {
+    width: 5rem;
+}
+
+#pFooter {
+    display: flex;
+    justify-content: center;   
+}
+
+#redeSocialFooter a img {
+    width: 2.2rem;
 }
