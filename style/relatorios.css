@@ -4,3 +4,51 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+body{
+
+    background-color: #F5F5F5;
+
+}
+
+#titulo{
+
+    margin: 23px;
+
+}
+
+button{
+    font-weight: bold;
+    border: 0px;
+    width: 100px;
+    color: white;
+    background-color: #81C3E2;
+    margin-right: 100px;
+    border-radius: 20px;
+    padding: 5.5px;
+}
+
+#botao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+#mainBox{
+    padding: 100px;
+    margin: 300px;
+    /* colocar uma borda preta bem fina para ver a mudança do cinza para o branco 
+    border: 10px black;
+    border-radius: 20px;
+     */
+    background-color: white;
+   
+
+}
+
+#grafico{
+
+    width: 250px;
+
+}
