@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap'); /* Fonte Arimo */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); /* Fonte Open Sans */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+section {
+    background: #F5F5F5;
+    border: 1px solid black;
+    float: right;
+    width: 90%;
+    height: 50rem;
+}
+
+.saldos {
+    width: 50rem;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.miniBox {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    width: 11rem;
+    height: 4rem;
+
+    background: #FFFFFF;
+    border: 0.1rem solid #D6DFE1;
+    border-radius: 0.4rem;
+}
+
+.miniBox img {
+    width: 30%;
+}
+
+.miniBox .pSaldos {
+    font-family: 'Arimo', sans-serif;
+}
+
+.miniBox .pCifrao {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
