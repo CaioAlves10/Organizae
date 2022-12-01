@@ -1,0 +1,71 @@
+.barralateral {
+    height: 100%;
+    width: 130px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 150px;
+    background-color: #004AAD;
+}
+
+.barralateral div {
+    padding: 8px;
+    font-size: auto;
+    display: block;
+}
+
+p {
+    padding: 5px;
+    width: auto;
+    font-size: auto;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.body-text {
+    margin-right: 150px;
+    font-size: 18px;
+}
+
+.imagem__img {
+    padding-top: 80px;
+    display: block;
+    width: 100%;
+}
+
+.sobrepor__img {
+    position: fixed; 
+    margin-left: 5px;
+    width: 4%;
+    height: 5%;
+    background: #004AAD;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.sobrepor__img:hover {
+    opacity: 1;
+}
+
+#dashboardimg {
+    align-items: center;
+    float: left;
+    padding-left: 25px;
+}
+
+#dashboard a img:hover {
+    background-color: #B1D4E0;
+    width: 50%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
