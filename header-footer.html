@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="header-footer.css">
+    
     <title>Organizae</title>
 </head>
 
@@ -14,52 +15,67 @@
         <nav id="navHeader">
             <a href="#"><img src="img/logoOrganizae.png" alt="Logo da Organizae"></a>
 
-            <ul id="menu">
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">Funcionalidades</a></li>
-                <li><a href="#">Contatos</a></li>
-                <li><a href="#" class="buttonMenu">Login</a></li>
-            </ul>
+            <div class="menuSection">
+                <div class="menuToggle">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+
+                <ul id="menu">
+                    <div class="lineSeparator"></div>
+                    <li><a href="#">Sobre nós</a></li>
+                    <div class="line"></div>
+                    <li><a href="#">Funcionalidades</a></li>
+                    <div class="line"></div>
+                    <li><a href="#">Contatos</a></li>
+                    <li><a href="#" class="buttonMenu">Login</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <footer>
-        <section id="rodape">
-            <div>
-                <a href="#"><img src="img/logoOrganizae.png" alt="Logo da Organizae"></a>
-            </div>
+        <section id="footerContainer">
+            <section id="footerSection">
+                <div>
+                    <a href="#"><img src="img/logoOrganizae.png" alt="Logo da Organizae"></a>
+                </div>
 
-            <div id="linksFooter">
-                <ul class="boxRodape">
-                    <li class="titleFooter">Institucional</li>
-                    <li><a href="#">Lei LGPD</a></li>
-                    <li><a href="#">Termos e Condições</a></li>
-                </ul>
-                <ul>
-                    <li class="titleFooter">Ajuda</li>
-                    <li><a href="#">Fale Conosco</a></li>
-                    <li><a href="#">Trabalhe Conosco</a></li>
-                </ul>
-                <ul>
-                    <li class="titleFooter">Contatos</li>
-                    <li><a href="#">organizae@contato.com</a></li>
-                    <div id="redeSocialFooter">
-                        <a href="#"><img src="img/icon-facebook.png" alt="Logo do Facebook"></a>
-                        <a href="#"><img src="img/icon-instagram.png" alt="Logo do Instagram"></a>
-                        <a href="#"><img src="img/icon-youtube.png" alt="Logo do Youtube"></a>
-                    </div>
-                </ul>
-            </div>
+                <div id="linksContainer">
+                    <ul class="divContainer">
+                        <li class="titleContainer">Institucional</li>
+                        <li><a href="#">Lei LGPD</a></li>
+                        <li><a href="#">Termos e Condições</a></li>
+                    </ul>
+                    <ul class="divContainer">
+                        <li class="titleContainer">Ajuda</li>
+                        <li><a href="#">Fale Conosco</a></li>
+                        <li><a href="#">Trabalhe Conosco</a></li>
+                    </ul>
+                    <ul class="divContainer">
+                        <li class="titleContainer">Contatos</li>
+                        <li><a href="#">organizae@contato.com</a></li>
+                        <section id="midiasSection">
+                            <a href="https://pt-br.facebook.com/"><img src="img/icon-facebook.png"
+                                    alt="Logo do Facebook"></a>
+                            <a href="#"><img src="img/icon-instagram.png" alt="Logo do Instagram"></a>
+                            <a href="#"><img src="img/icon-youtube.png" alt="Logo do Youtube"></a>
+                        </section>
+                    </ul>
+                </div>
+            </section>
+
+            <hr>
+
+            <p id="infoFooter">
+                ©2022 Organizae Tecnologia Ltda. CNPJ 00.000.000/0000-00
+            </p>
         </section>
-
-        <hr>
-        <br>
-        <p id="pFooter">
-            ©2022 Organizae Tecnologia Ltda. CNPJ 00.000.000/0000-00
-        </p>
     </footer>
+    <script src="header-footer.js"></script>
 </body>
 
 </html>
