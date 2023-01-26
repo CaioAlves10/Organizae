@@ -139,23 +139,64 @@
 
 /* quinta parte (funcionalidades) */
 .funcionalidades2{
-
+    margin-top: 100px;
 }
 .categorias{
-
+    padding: 50px;
+    background-color: #DBEEF2;
+    border-radius: 70px;
+    margin-left: 10%; margin-right: 40%;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px;
+    
 }
 .graficos{
-
+    padding: 50px;
+    background-color: #DBEEF2;
+    border-radius: 70px;
+    margin-left: 40%;
+    margin-right: 17%;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px;
+    margin-top: 70px;
 }
 .objetivos{
-
+    padding: 50px;
+    background-color: #DBEEF2;
+    border-radius: 70px;
+    margin-left: 15%;
+    margin-right: 30%;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px;
+    margin-top: 70px;
+}
+.cadastrese-foto{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
 }
 .cadastre-se{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 30%;
+    align-items: center;
 }
-p{
-
+.venha-p-organizae{
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #0B1B3D;
+    font-weight: 600;
+    margin-top: 200px; 
 }
 .button-cadastre-se{
-
+    padding-left: 50px; padding-right: 50px; padding-top: 10px; padding-bottom: 10px;
+    border-radius: 30px; border-color: #1039B4;
+    background-color: #1039B4;
+    color: #F5F5F5;
+    font-size: 20px;
+    margin-bottom: 200px;
+}
+.abstrata-final{
+    width: 700px;
 }
