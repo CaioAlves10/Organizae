@@ -4,3 +4,199 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/* primeira parte (inicio) */
+.inicio{
+    background-color: #DBE1F4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.first{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 150px;
+}
+.title1{
+    font-size: 70px;
+    font-weight: 600;
+    color: #0B1B3D;
+}
+.negrito{
+    color: #436092;
+}
+.text1{
+    font-size: 30px;
+    margin-top: 40px;
+    color: #0B1B3D;
+    font-weight: 600;
+}
+.entrar{
+    margin-top: 50px;
+    padding-left: 40px; padding-right: 40px; padding-top: 10px; padding-bottom: 10px;
+    color: #DBE1F4;
+    background-color: #004AAD;
+    border: 0; border-radius: 15px;
+}
+.entrar-p{
+    font-size: 20px;
+    font-weight: 700;
+}
+.img-cartao{
+    width: 700px;
+    margin-top: 50px; margin-bottom: 60px;
+}
+/* segunda parte (missao, visao, valores) */
+.missao-visao-valores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+}
+.img-missao, .img-visao, .img-valores{
+    width: 150px;
+    margin-top: 60px;
+}
+.missao-title, .visao-title, .valores-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+}
+.missao-p, .visao-p ,.valores-p{
+    margin-top: 9px;
+    margin-bottom: 80px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+.missao{
+    margin-left: 200px;
+}
+.valores{
+    margin-right: 200px;
+}
+.missao, .visao, .valores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* terceira parte (sobre nos) */
+.sobrenos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.title2{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 60px;
+    font-weight:600;
+    color: #0B1B3D;
+}
+.sobrenos-p1, .sobrenos-p2{
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #0B1B3D;
+}
+.textos-sobrenos{
+    margin-bottom: 80px; margin-top: 150px; margin-left: 150px;
+}
+.sobrenos-p1{
+    margin-top: 100px;
+}
+.sobrenos-p2{
+    text-align: end;
+    margin-top: 100px;
+}
+
+/* quarta parte (porque escolher a gente) */
+.funcionalidades1{
+    background-color: #DBE1F4;
+}
+.abstrato1{
+    width: 500px;
+}
+.abstrato2{
+    width: 300px;
+    margin-top:100px;
+}
+.divisao1-funcio, .divisao2-funcio{
+    display: flex;
+    flex-direction: row;
+}
+.title3{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 60px;
+    font-weight:600;
+    color: #0B1B3D;
+    margin-top: 350px; margin-bottom: 60px;
+}
+.funcio-p{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 30px;
+    margin-left: 500px; margin-right: 80px;
+    color: #0B1B3D;
+}
+
+/* quinta parte (funcionalidades) */
+.funcionalidades2{
+    margin-top: 100px;
+}
+.categorias{
+    padding: 50px;
+    background-color: #DBEEF2;
+    border-radius: 70px;
+    margin-left: 10%; margin-right: 40%;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px;
+    
+}
+.graficos{
+    padding: 50px;
+    background-color: #DBEEF2;
+    border-radius: 70px;
+    margin-left: 40%;
+    margin-right: 17%;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px;
+    margin-top: 70px;
+}
+.objetivos{
+    padding: 50px;
+    background-color: #DBEEF2;
+    border-radius: 70px;
+    margin-left: 15%;
+    margin-right: 30%;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px;
+    margin-top: 70px;
+}
+.cadastrese-foto{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.cadastre-se{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 30%;
+    align-items: center;
+}
+.venha-p-organizae{
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #0B1B3D;
+    font-weight: 600;
+    margin-top: 200px; 
+}
+.button-cadastre-se{
+    padding-left: 50px; padding-right: 50px; padding-top: 10px; padding-bottom: 10px;
+    border-radius: 30px; border-color: #1039B4;
+    background-color: #1039B4;
+    color: #F5F5F5;
+    font-size: 20px;
+    margin-bottom: 200px;
+}
+.abstrata-final{
+    width: 700px;
+}
