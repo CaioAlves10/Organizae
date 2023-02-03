@@ -1,6 +1,6 @@
 # Organizae
 
-![App Screenshot](./images/README-logo-com-fundo.png)
+![App Screenshot](./images/img-readme/README-logo-com-fundo.png)
 
 # ** Readme em construção 🛠
 ## Organizador de finanças | Grupo 5
@@ -38,6 +38,6 @@ Pedimos que você faça o commit com um comentário, explicando o que foi adicio
 
 
 ## 🔗 Links
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![linkedin](./images/img-readme/linkedin_icon.png)](https://www.linkedin.com/)
 
-[![instagram](logo instagram)](https://www.instagram.com/)
+[![instagram](./images/img-readme/instagram_icon.png)](https://www.instagram.com/)
