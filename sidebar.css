@@ -183,14 +183,15 @@ body.dark .sidebar header .toggle{
 }
 .sidebar li a{
     list-style: none;
-    height: 100%;
+    text-decoration: none;
     background-color: transparent;
+    
     display: flex;
     align-items: center;
+
     height: 100%;
     width: 100%;
     border-radius: 6px;
-    text-decoration: none;
     transition: var(--tran-03);
 }
 
@@ -201,6 +202,7 @@ body.dark .sidebar header .toggle{
 .sidebar li a:hover .text{
     color: var(--sidebar-color);
 }
+
 body.dark .sidebar li a:hover .icon,
 body.dark .sidebar li a:hover .text{
     color: var(--text-color);

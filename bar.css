@@ -1,17 +1,17 @@
 /* Google Font Import - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-:root{
+:root {
     /* ===== Colors ===== */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
-    --primary-color: #695CFE;
+    --primary-color: #87AFE8;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
@@ -23,18 +23,18 @@
     --tran-05: all 0.3s ease;
 }
 
-body{
+body {
     min-height: 100vh;
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
 
-::selection{
+::selection {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--sidebar-color);
 }
 
-body.dark{
+body.dark {
     --body-color: #18191a;
     --sidebar-color: #242526;
     --primary-color: #3a3b3c;
@@ -44,7 +44,7 @@ body.dark{
 }
 
 /* ===== Sidebar ===== */
-.sidebar{
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -56,12 +56,22 @@ body.dark{
     z-index: 100;  
 }
 
-.sidebar.close{
+.sidebar.close {
     width: 88px;
 }
 
-.sidebar.close .image-text .image-logo img {
-    width: 50px;
+.sidebar.close .text {
+    opacity: 0;
+}
+
+.sidebar .text {
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+
+    color: var(--text-color);
+    transition: var(--tran-03);
 }
 
 .sidebar section .menu ul .link {
@@ -69,9 +79,20 @@ body.dark{
     align-items: center;
     gap: 16px;
 
-    border-radius: 6px;
-    height: 50px;
     margin-top: 10px;
+    width: 230px;
+    height: 50px;
+
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+.sidebar.close section .menu ul .link {
+    background-color: transparent;
+}
+
+.sidebar.close section .menu ul .link a span {
+    display: none;
 }
 
 .sidebar section .menu ul .link .link-icon {
@@ -85,17 +106,7 @@ body.dark{
     fill: var(--text-color);
     transition: var(--tran-03);
 
-    background-color: cadetblue;
-}
-
-.sidebar .text {
-    font-size: 17px;
-    font-weight: 500;
-    white-space: nowrap;
-    opacity: 1;
-
-    color: var(--text-color);
-    transition: var(--tran-03);
+    background-color: transparent;
 }
 
 .sidebar section .menu ul .link a {
@@ -104,11 +115,94 @@ body.dark{
 
 /* =========================== */
 
-.sidebar header{
+.sidebar header {
     position: relative;
 }
 
-.sidebar header .image-text{
+.sidebar header .image-text {
     display: flex;
     align-items: center;
+    margin-left: 5%;
 }
+
+header .image-text .name-logo {
+    margin-top: 2px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar header .image-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .image-text .image-logo img {
+    width: 45px;
+}
+
+/* TOGGLE */
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+
+    fill: #695CFE;
+    background-color: #FFF;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transform: translateY(-50%) rotate(180deg);
+    transition: var(--tran-05);
+}
+
+body.dark .sidebar header .toggle {
+    color: var(--text-color);
+}
+
+.sidebar.close .toggle {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar li a {
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--tran-03);
+}
+
+/* Mode */
+
+.sidebar .menu-bar {
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+.menu-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar .menu-bar .bottom-content .mode {
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    position: relative;
+    transition: var(--tran-05);
+}
+
+
+
