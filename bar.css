@@ -74,7 +74,8 @@ body.dark {
     transition: var(--tran-03);
 }
 
-.sidebar section .menu ul .link {
+.sidebar section .menu ul .link,
+.bottom-content .logout-icon-text {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -87,7 +88,8 @@ body.dark {
     background-color: transparent;
 }
 
-.sidebar.close section .menu ul .link {
+.sidebar.close section .menu ul .link,
+.bottom-content .logout-icon-text {
     background-color: transparent;
 }
 
@@ -95,7 +97,8 @@ body.dark {
     display: none;
 }
 
-.sidebar section .menu ul .link .link-icon {
+.sidebar section .menu ul .link .link-icon,
+.bottom-content .logout-icon-text .logout-icon {
     min-width: 60px;
     display: flex;
     align-items: center;
@@ -109,8 +112,22 @@ body.dark {
     background-color: transparent;
 }
 
-.sidebar section .menu ul .link a {
+.sidebar section .menu ul .link .link-icon a svg,
+.bottom-content .logout-icon-text .logout-icon a svg {
+    fill: red;
+}
+
+.sidebar section .menu ul .link a,
+.bottom-content .logout-icon-text a {
     text-decoration: none;
+    
+}
+
+/* aplicando hover */
+.sidebar section .menu ul .link .link-icon:hover,
+.bottom-content .logout-icon-text .logout-icon:hover {
+    background-color: var( --primary-color);
+    
 }
 
 /* =========================== */
@@ -142,16 +159,18 @@ header .image-text .name-logo {
     width: 45px;
 }
 
-/* TOGGLE */
+/* chevron TOGGLE */
 
 .sidebar header .toggle {
     position: absolute;
     top: 50%;
     right: -25px;
 
-    fill: #695CFE;
+    width: 25px;
+    height: 25px;
+    fill: var(--primary-color);
     background-color: #FFF;
-    border-radius: 50%;
+    border-radius: 100%;
 
     display: flex;
     align-items: center;
@@ -171,7 +190,6 @@ body.dark .sidebar header .toggle {
 }
 
 .sidebar li a {
-    list-style: none;
     height: 100%;
     background-color: transparent;
     display: flex;
@@ -179,7 +197,6 @@ body.dark .sidebar header .toggle {
     height: 100%;
     width: 100%;
     border-radius: 6px;
-    text-decoration: none;
     transition: var(--tran-03);
 }
 
