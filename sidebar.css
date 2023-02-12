@@ -1,50 +1,51 @@
 /* Google Font Import - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-:root{
+:root {
     /* ===== Colors ===== */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
-    --primary-color: #695CFE;
+    --primary-color: #87AFE8;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
+    --icon-color: #FFF;
 
     /* ====== Transition ====== */
-    --tran-03: all 0.2s ease;
-    --tran-03: all 0.3s ease;
+    --tran-03: all 0.1s ease;
     --tran-04: all 0.3s ease;
     --tran-05: all 0.3s ease;
 }
 
-body{
+body {
     min-height: 100vh;
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
 
-::selection{
+::selection {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--sidebar-color);
 }
 
-body.dark{
+body.dark {
     --body-color: #18191a;
     --sidebar-color: #242526;
     --primary-color: #3a3b3c;
     --primary-color-light: #3a3b3c;
     --toggle-color: #fff;
     --text-color: #ccc;
+    --icon-color: #FFF;
 }
 
 /* ===== Sidebar ===== */
- .sidebar{
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -55,195 +56,220 @@ body.dark{
     transition: var(--tran-05);
     z-index: 100;  
 }
-.sidebar.close{
+
+.sidebar.close {
     width: 88px;
 }
 
-/* ===== Reusable code - Here ===== */
-.sidebar li{
-    height: 50px;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
+.sidebar.close .text {
+    opacity: 0;
 }
 
-.sidebar .icon{ /* quadrado com ícone*/
-    min-width: 60px;
-    border-radius: 6px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-}
-
-.sidebar .text,
-.sidebar .icon{
-    color: var(--text-color);
-    transition: var(--tran-03);
-}
-
-.sidebar .text{
+.sidebar .text {
     font-size: 17px;
     font-weight: 500;
     white-space: nowrap;
     opacity: 1;
+
+    color: var(--text-color);
+    transition: var(--tran-03);
 }
 
-.sidebar.close .text{
-    opacity: 0;
+.sidebar section .menu ul .link,
+.sidebar .bottom-content .logout-icon-text {
+    display: flex;
+    align-items: center;
+
+    margin-top: 10px;
+    
+    height: 50px;
+
+    border-radius: 6px;
+    background-color: transparent;
+    transition: var(--tran-03);
+}
+
+.sidebar.close section .menu ul .link,
+.sidebar.close .bottom-content .logout-icon-text {
+    background-color: transparent;
+}
+
+.sidebar.close section .menu ul .link a span {
+    display: none;
+}
+
+.sidebar section .menu ul .link .link-icon,
+.sidebar .bottom-content .logout-icon-text .logout-icon {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    height: 100%;
+
+    fill: var(--text-color);
+    transition: var(--tran-04);
+
+    background-color: transparent;
+}
+
+.sidebar section .menu ul .link .link-icon a svg,
+.sidebar .bottom-content .logout-icon-text .logout-icon a svg {
+    fill: var(--text-color);
+}
+
+.sidebar section .menu ul .link a,
+.sidebar .bottom-content .logout-icon-text a {
+    text-decoration: none;
+    
+}
+
+/* aplicando hover */
+
+.sidebar section .menu ul .link .link-icon:hover a svg,
+.sidebar .bottom-content .logout-icon-text .logout-icon:hover a svg {  
+    fill: var(--icon-color);  
+}
+
+.sidebar.close section .menu ul .link .link-icon:hover,
+.sidebar.close .bottom-content .logout-icon-text .logout-icon:hover {
+    background-color: var(--primary-color);
+}
+
+.sidebar section .menu ul .link:hover,
+.sidebar .bottom-content .logout-icon-text:hover {
+    background-color: var(--primary-color);
+}
+
+.sidebar section .menu ul .link:hover a span,
+.sidebar .bottom-content .logout-icon-text:hover a span {
+    color: var(--icon-color);
+}
+
+.sidebar section .menu ul .link:hover .link-icon a svg,
+.sidebar .bottom-content .logout-icon-text:hover .logout-icon a svg {
+    fill: var(--icon-color);
 }
 
 /* =========================== */
 
-.sidebar header{
+.sidebar header {
     position: relative;
 }
 
-.sidebar header .image-text{
+.sidebar header .image-text {
     display: flex;
     align-items: center;
+    margin-left: 5%;
 }
-.sidebar header .logo-text{
-    display: flex;
-    flex-direction: column;
-}
-header .image-text .name {
+
+header .image-text .name-logo {
     margin-top: 2px;
+    margin-left: 10px;
     font-size: 18px;
     font-weight: 600;
 }
 
-header .image-text .profession{
-    font-size: 16px;
-    margin-top: -2px;
-    display: block;
-}
-
-.sidebar header .image{
+.sidebar header .image-logo {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sidebar header .image img{
-    width: 40px;
-    border-radius: 6px;
+.sidebar .image-text .image-logo img {
+    width: 45px;
 }
 
-.sidebar header .toggle{
+/* chevron TOGGLE */
+
+.sidebar header .toggle {
     position: absolute;
     top: 50%;
     right: -25px;
-    transform: translateY(-50%) rotate(180deg);
-    height: 25px;
+
     width: 25px;
-    background-color: var(--primary-color);
-    color: var(--sidebar-color);
-    border-radius: 50%;
+    height: 25px;
+    fill: var(--primary-color);
+    background-color: #FFF;
+    border-radius: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+
     cursor: pointer;
+    transform: translateY(-50%) rotate(180deg);
     transition: var(--tran-05);
 }
 
-body.dark .sidebar header .toggle{
+body.dark .sidebar header .toggle {
     color: var(--text-color);
 }
 
-.sidebar.close .toggle{
+.sidebar.close .toggle {
     transform: translateY(-50%) rotate(0deg);
 }
 
-.sidebar .menu{
-    margin-top: 40px;
-}
 
-.sidebar li.search-box{
-    border-radius: 6px;
-    background-color: var(--primary-color-light);
-    cursor: pointer;
-    transition: var(--tran-05);
-}
+/* ========== */
 
-.sidebar li.search-box input{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    background-color: var(--primary-color-light);
-    color: var(--text-color);
-    border-radius: 6px;
-    font-size: 17px;
-    font-weight: 500;
-    transition: var(--tran-05);
-}
-.sidebar li a{
-    list-style: none;
-    text-decoration: none;
-    background-color: transparent;
-    
-    display: flex;
-    align-items: center;
-
-    height: 100%;
-    width: 100%;
-    border-radius: 6px;
-    transition: var(--tran-03);
-}
-
-.sidebar li a:hover{
-    background-color: var(--primary-color);
-}
-.sidebar li a:hover .icon,
-.sidebar li a:hover .text{
-    color: var(--sidebar-color);
-}
-
-body.dark .sidebar li a:hover .icon,
-body.dark .sidebar li a:hover .text{
-    color: var(--text-color);
-}
-
-.sidebar .menu-bar{
-    height: calc(100% - 55px);
+.sidebar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow-y: scroll;
 }
-.menu-bar::-webkit-scrollbar{
-    display: none;
-}
-.sidebar .menu-bar .mode{
+
+/* Mode */
+
+.sidebar .bottom-content .mode {
     border-radius: 6px;
     background-color: var(--primary-color-light);
     position: relative;
     transition: var(--tran-05);
+
+    display: flex;
+    align-items: center;
 }
 
-.menu-bar .mode .sun-moon{
+.sidebar .bottom-content .mode .sun-moon {
     height: 50px;
     width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.mode .sun-moon i{
-    position: absolute;
-}
-.mode .sun-moon i.sun{
-    opacity: 0;
-}
-body.dark .mode .sun-moon i.sun{
-    opacity: 1;
-}
-body.dark .mode .sun-moon i.moon{
-    opacity: 0;
+.sidebar .bottom-content .mode .sun-moon svg {
+    position: relative;
 }
 
-.menu-bar .bottom-content .toggle-switch{
+.mode .sun-moon svg.sun {
+    display: none;
+}
+
+.mode .sun-moon svg.moon {
+    fill: var(--text-color);
+}
+
+.sidebar.close .mode .sun-moon svg.moon {
+    display: none;
+}
+
+
+body.dark .mode .sun-moon svg.sun {
+    display: block;
+    fill: var(--text-color);
+}
+
+body.dark .sidebar.close .mode .sun-moon svg.sun {
+    display: none;
+}
+
+body.dark .mode .sun-moon svg.moon {
+    display: none;
+}
+
+.sidebar .bottom-content .toggle-switch {
     position: absolute;
     right: 0;
     height: 100%;
@@ -254,7 +280,8 @@ body.dark .mode .sun-moon i.moon{
     border-radius: 6px;
     cursor: pointer;
 }
-.toggle-switch .switch{
+
+.toggle-switch .switch {
     position: relative;
     height: 22px;
     width: 40px;
@@ -263,7 +290,7 @@ body.dark .mode .sun-moon i.moon{
     transition: var(--tran-05);
 }
 
-.switch::before{
+span.switch::before {
     content: '';
     position: absolute;
     height: 15px;
@@ -276,32 +303,6 @@ body.dark .mode .sun-moon i.moon{
     transition: var(--tran-04);
 }
 
-body.dark .switch::before{
+body.dark span.switch::before {
     left: 20px;
-}
-
-.home{
-    position: absolute;
-    top: 0;
-    top: 0;
-    left: 250px;
-    height: 100vh;
-    width: calc(100% - 250px);
-    background-color: var(--body-color);
-    transition: var(--tran-05);
-}
-.home .text{
-    font-size: 30px;
-    font-weight: 500;
-    color: var(--text-color);
-    padding: 12px 60px;
-}
-
-.sidebar.close ~ .home{
-    left: 78px;
-    height: 100vh;
-    width: calc(100% - 78px);
-}
-body.dark .home .text{
-    color: var(--text-color);
 }
