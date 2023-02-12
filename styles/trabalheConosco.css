@@ -149,7 +149,7 @@ input[type="submit"] {
 
 @media (max-width: 420px) {
     .forma {
-        width: 80%;
+        width: 100%;
     }
 
     .textarea textarea {
