@@ -6,6 +6,7 @@
 }
 body{
     background-color: #F5F5F5;
+    width: 100%; height: 100%;
 }
 .lancamentos{
     display: flex;
@@ -35,13 +36,26 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-top: 20px; padding-bottom: 20px; padding-right: 30px; padding-left: 30px;
+    padding-top: 15px; padding-bottom: 15px; padding-right: 30px; padding-left: 30px;
     background-color: #EDEDED;
     border-radius: 20px;
     box-shadow:  10px -5px 5px -3px #E1E1E1 ;
     margin-bottom: 100px; margin-top: 70px;
 }
 .img-boxes{
-    max-width: 40px;
+    max-width: 60px;
     margin-right: 30px;
+}
+.tabela-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: solid #0B1B3D;
+    border-radius: 30px;
+    width: 50%; padding: 40px;
+    align-items: center;
+    margin-left: 25%; margin-right: 25%; margin-bottom: 5%;
+}
+.thead-blue{
+    background-color: #8bcbe74d;
 }
