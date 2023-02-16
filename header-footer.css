@@ -37,6 +37,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
+    /* font-family: Inter,Helvetica Neue,Arial,sans-serif; */
 
     height: 100vh;
 }
@@ -359,7 +360,7 @@ hr {
 
     /* NAVBAR ON */
     .menuSection.on .menuToggle .one {
-        transform: translate(7px, 7px) rotate(45deg);
+        transform: translate(5px, 11px) rotate(45deg);
     }
       
     .menuSection.on .menuToggle .two {
@@ -367,7 +368,7 @@ hr {
     }
       
     .menuSection.on .menuToggle .three {
-        transform: translate(7px, -9px) rotate(-45deg);
+        transform: translate(5px, -9px) rotate(-45deg);
     }
 
     .menuSection.on {
@@ -376,9 +377,9 @@ hr {
         right: 0;
 
         width: 100vw;
-        height: 287px;
+        height: 29.2rem;
 
-        background: var(--header-color);
+        background: transparent;
 
         z-index: 10;
     }
@@ -389,43 +390,49 @@ hr {
 
     .menuSection.on .menuToggle {
         position: absolute;
-        right: 11.1%;
+        right: 8%;
         top: 20px;
     }
-
+    
     header nav .menuSection.on #menu {
         text-align: center;
         display: block;
-
+        
         position: absolute;
-        top: 7.9rem;
-        width: 100%;
-    }
+        top: 7.5rem;
+        left: 1.5%;
+        right: 1.5%;
+        width: 97%;
+        background-color: white;
 
+        z-index: 2;
+    }
+    
     header nav .menuSection.on ul li a {
         transition-duration: 0.5s;
         line-height: 4.5rem;
         display: block;
     }
 
+    header nav .menuSection.on #overlay {
+        background-color: rgba(0,0,0,0.5);
+
+        width: 100vw;
+        height: 100vh;
+        
+        position: fixed;
+        top: 7.5rem;
+        z-index: -1;
+    }
+    
     header nav .menuSection.on ul li a:first-child {
         margin-top: 0.5rem;
     }
 
-    .lineSeparator {
-        background-color: #D6DFE1;
-        height: 2px;
-        width: 100%;
-        margin: 0px auto;
-        border-radius: 1rem;
-
-        transition-duration: 0.3s;
-    }
-
     .line {
-        background-color: #fff;
+        background-color: #e1dddb;
         height: 1px;
-        width: 80%;
+        width: 100%;
         margin: 6px auto;
         border-radius: 1rem;
 
