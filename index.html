@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav id="navHeader">
-            <a href="#"><img src="./images/img-header-footer/logo-organizae.png" alt="Logo da Organizae"></a>
+            <a href="/index.html"><img src="/images/img-header-footer/logo-organizae.png" alt="Logo da Organizae"></a>
 
             <div class="menuSection">
                 <div class="menuToggle">
@@ -20,14 +20,15 @@
                     <div class="three"></div>
                 </div>
 
+                <div id="overlay"></div>
+
                 <ul id="menu">
-                    <div class="lineSeparator"></div>
-                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
                     <div class="line"></div>
-                    <li><a href="#">Funcionalidades</a></li>
+                    <li><a href="#fun">Funcionalidades</a></li>
                     <div class="line"></div>
-                    <li><a href="#">Contatos</a></li>
-                    <li><a href="./pages/login-cadastro.html" class="buttonMenu">Login</a></li>
+                    <li><a href="#foo">Contatos</a></li>
+                    <li><a href="/pages/login-cadastro.html" class="buttonMenu">Login</a></li>
                 </ul>
             </div>
         </nav>
@@ -43,7 +44,7 @@
                 <img class="img-cartao" src="./images/img-singlepage-index/cartoes.png" alt="Cartões de crédito simbolizando o controle das finanças">
             </div>
         </section>
-        <section class="missao-visao-valores">
+        <section class="missao-visao-valores" id="sobre">
             <div class="missao">
                 <img class="img-missao" src="./images/img-singlepage-index/missao.png" alt="Foguete simbolizando a nossa missão">
                 <h4 class="missao-title">Missão</h4>
@@ -70,7 +71,7 @@
                 <img src="./images/img-singlepage-index/money.png" alt="imagem de notas de dolar voando">
             </div>
         </section>
-        <section class="funcionalidades1">
+        <section class="funcionalidades1" id="fun">
             <div class="divisao1-funcio">
                 <img class="abstrato1" src="./images/img-singlepage-index/abstrato-inicio.png" alt="Imagem abstrata">
                 <h2 class="title3">Mas... Por que escolher a gente?</h2>
@@ -93,7 +94,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="foo">
         <section id="footerContainer">
             <section id="footerSection">
                 <div>
@@ -131,6 +132,6 @@
             </p>
         </section>
     </footer>
-    <script src="./header-footer.js"></script>
+    <script src="/header-footer.js"></script>
 </body>
 </html>

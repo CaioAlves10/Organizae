@@ -403,16 +403,30 @@ hr {
         left: 1.5%;
         right: 1.5%;
         width: 97%;
-        background-color: white;
+        background-color: rgb(255, 255, 255);
 
         z-index: 2;
-    }
+    }    
     
     header nav .menuSection.on ul li a {
         transition-duration: 0.5s;
         line-height: 4.5rem;
-        display: block;
+        display: inline-block;
+
     }
+
+    header nav .menuSection.on ul li:hover {
+        transform: translateY(0px);
+        background: #f3f3f3;
+        opacity: 0.9;
+    }
+
+    header nav .menuSection.on ul li .buttonMenu:hover {
+        transform: translateY(0px);
+        box-shadow: none;
+        opacity: 0.9;
+    }
+
 
     header nav .menuSection.on #overlay {
         background-color: rgba(0,0,0,0.5);
@@ -424,16 +438,12 @@ hr {
         top: 7.5rem;
         z-index: -1;
     }
-    
-    header nav .menuSection.on ul li a:first-child {
-        margin-top: 0.5rem;
-    }
 
     .line {
-        background-color: #e1dddb;
+        background-color: #e4e4e4;
         height: 1px;
         width: 100%;
-        margin: 6px auto;
+        margin: 0;
         border-radius: 1rem;
 
         transition-duration: 0.3s;
@@ -441,82 +451,44 @@ hr {
 
     .buttonMenu {
         padding: 0;
+        margin: 0;
+        
         border-radius: 0;
         font-size: 1.8rem;
-    }
-}
 
-@media (max-width: 555px) {
-    .menuSection.on .menuToggle {
-        right: 11.3%;
-    }
-}
-
-@media (max-width: 499px) {
-    .menuSection.on .menuToggle {
-        right: 11%;
+        width: 100%;
+        height: 100%;
     }
 }
 
 @media (max-width: 440px) {
     html {
-        font-size: 52%;
-    }
-
-    #navHeader {
-        width: 89%;
-    }
-
-    .one,
-    .two,
-    .three {
-        background-color: #fff;
-        width: 100%;
-        height: 3px;
-        margin: 5px auto;
-        border-radius: 1rem;
-
-        transition-duration: 0.3s;
-    }
-
-    .menuToggle {
-        width: 30px;
-        height: 25px;
-    }
-
-    .menuSection.on {
-        height: 255px;
-    }
-
-    .menuSection.on .menuToggle {
-        top: 19px;
-        right: 13.8%;
-    }
-
-    header nav .menuSection.on #menu {
-        top: 8.2rem;
+        font-size: 58%;
     }
 
     #navHeader img,
     #footerSection img {
-        width: 55px;
+        width: 58px;
         padding: 5px 0;
     }
 }
 
-
-
-@media (max-width:320px) {
-    html {
-        font-size: 50%;
+@media (max-width: 320px) {
+    #navHeader img,
+    #footerSection img {
+        width: 55px;
+        padding: 4px 0;
     }
 
-    .menuSection.on {
-        height: 248px;
+    header nav .menuSection.on #overlay {
+        top: 7.2rem;
     }
 
     header nav .menuSection.on #menu {
-        top: 8.5rem;
+        top: 7.2rem;
+        left: 2%;
+        right: 2%;
+        width: 96%;
     }
 }
 
