@@ -10,23 +10,12 @@
     /* ===== Colors ===== */
     --header-color: #DBE1F4;
     --text-color: #0B1B3D;
-    --button-color: #004AAD;
+    --button-color: #1A4D99;
     --toggle-color: #;
 
-    /* ====== shadow ====== */
-    
-}
-
-::selection {
-    background-color: var(--primary-color);
-    color: var(--sidebar-color);
-}
-
-body.dark {
-    --header-color: #DBE1F4;
-    --text-color: #0B1B3D;
-    --button-color: #004AAD;
-    --toggle-color: #;
+    --footer-color: #1A4D99;
+    --footer-text-color: #fff;
+    --footer-links: #F5F5F5;    
 }
 
 html {
@@ -37,7 +26,6 @@ html {
 body {
     font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
-    /* font-family: Inter,Helvetica Neue,Arial,sans-serif; */
 
     height: 100vh;
 }
@@ -123,23 +111,17 @@ header nav .menuSection ul li:hover {
 
 /* Footer */
 
-footer #footerSection div ul li a {
-    text-decoration: none;
-    color: #fff;
-}
-
 footer {
-    background: #145DA0;
+    background: var(--footer-color);
+    color: var(--footer-text-color);
     height: auto;
-    /* padding: 3rem 10rem 2rem; */
-    color: white;
 }
 
 footer #footerContainer {
     width: 75%;
     max-width: 980px;
     margin: auto;
-    padding: 3rem 0 2rem;
+    padding: 4rem 0 2rem;
 }
 
 footer #footerSection {
@@ -155,7 +137,13 @@ footer #linksContainer {
 }
 
 footer #linksContainer ul li {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+footer #footerSection div ul li a {
+    text-decoration: none;
+    color: var(--footer-links);
+    line-height: 2.5rem;
 }
 
 footer #footerSection #linksContainer ul .titleContainer {
@@ -167,11 +155,11 @@ footer #footerSection #linksContainer ul #midiasSection {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 #midiasSection a img {
-    width: 3rem;
+    width: 2.8rem;
 }
 
 #infoFooter {
@@ -186,7 +174,13 @@ hr {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 1440px) {
+@media (max-width: 1180px) {
+    footer #linksContainer {
+        gap: 10rem;
+    }
+}
+
+@media (max-width: 1094px) {
     footer #linksContainer {
         gap: 8rem;
     }
@@ -200,23 +194,21 @@ hr {
     #menu {
         gap: 4rem;
     }
-}
 
-@media (max-width: 894px) {
     #midiasSection a img {
-        width: 27px;
+        width: 2.8rem;
     }
 
     footer #footerContainer {
         width: 80%;
     }
-
+    
     footer #linksContainer {
-        gap: 5.5rem;
+        gap: 6.5rem;
     }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 908px) {
     html {
         font-size: 61.5%;
     }
@@ -235,23 +227,22 @@ hr {
         padding: 1.1rem 2.4rem;
     }
 
-    #midiasSection a img {
-        width: 27px;
+    footer #linksContainer {
+        gap: 5.3rem;
     }
 
-    footer #linksContainer {
-        gap: 6rem;
+    #midiasSection a img {
+        width: 2.6rem;
     }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 847px) {
     footer #footerContainer {
-        width: 85%;
-        padding: 2rem 0;
+        width: 83%;
     }
 
     footer #linksContainer {
-        gap: 5rem;
+        gap: 4.5rem;
     }
 }
 
@@ -273,25 +264,33 @@ hr {
     .buttonMenu {
         padding: 1rem 2.3rem;
     }
+
+    footer #linksContainer {
+        gap: 4.3rem;
+    }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
     #menu {
         gap: 3rem;
     }
 
+    footer #footerContainer {
+        width: 85%;
+    }
+
     footer #linksContainer {
-        gap: 3.7rem;
+        gap: 4rem;
     }
 }
 
-@media (max-width: 724px) {
+@media (max-width: 731px) {
     #menu {
         gap: 2.8rem;
     }
 
-    footer #linksContainer {
-        gap: 3.7rem;
+    footer #footerContainer {
+        width: 87%;
     }
 }
 
@@ -306,7 +305,7 @@ hr {
 
     footer #footerContainer {
         width: 80%;
-        padding: 2rem 0;
+        padding: 2.5rem 0 2rem;
     }
 
     footer #footerSection {
@@ -403,7 +402,7 @@ hr {
         left: 1.5%;
         right: 1.5%;
         width: 97%;
-        background-color: rgb(255, 255, 255);
+        background-color: #fff;
 
         z-index: 2;
     }    
@@ -491,7 +490,3 @@ hr {
         width: 96%;
     }
 }
-
-/* 
-
-*/
