@@ -6,47 +6,161 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/dashboard.css">
+    <link rel="stylesheet" href="../sidebar.css">
     <title>Dashboard</title>
 </head>
 
 <body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image-logo">
+                    <img src="/images/img-logo/logo-organizae.png" alt="">
+                </span>
 
-    <section id="content">
-
-        <h3 id="titleContent">Dashboard</h3>
-
-        <section class="saldos">
-
-            <div class="saldosBox">
-                <img src="/images/img-dashboard/icon-moeda.png" alt="Ícone de uma moeda">
-                <div>
-                    <p class="subTitleSaldos">Saldo Atual</p>
-                    <p class="cifraoSaldos">R$00,00</p>
+                <div class="text logo-text">
+                    <span class="name-logo">Organizae</span>
                 </div>
             </div>
 
-            <div class="saldosBox">
-                <img src="/images/img-dashboard/icon-verde.png" alt="Ícone de seta verde para baixo">
-                <div>
-                    <p class="subTitleSaldos">Receitas</p>
-                    <p class="cifraoSaldos">R$00,00</p>
-                </div>
+            <svg class="chevron toggle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.293 15.707-1.414-1.414L13.586 12 9.293 7.707l1.414-1.414L16.414 12l-5.707 5.707z"></path>
+            </svg>
+        </header>
+
+        <section class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <div class="link">
+                        <div class="link-icon">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M5 22h14a2 2 0 0 0 2-2v-9a1 1 0 0 0-.29-.71l-8-8a1 1 0 0 0-1.41 0l-8 8A1 1 0 0 0 3 11v9a2 2 0 0 0 2 2zm5-2v-5h4v5zm-5-8.59 7-7 7 7V20h-3v-5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v5H5z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="test">
+                            <a href="#"><span class="text nav-text">Dashboard</span></a>
+                        </div>
+                    </div>
+
+                    <div class="link">
+                        <div class="link-icon">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M21 5c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5zM5 19V5h14l.002 14H5z"></path><path d="M7 7h1.998v2H7zm4 0h6v2h-6zm-4 4h1.998v2H7zm4 0h6v2h-6zm-4 4h1.998v2H7zm4 0h6v2h-6z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="#"><span class="text nav-text">Lançamentos</span></a>
+                    </div>
+
+                    <div class="link">
+                        <div class="link-icon">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M20 7h-4V4c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H4c-1.103 0-2 .897-2 2v9a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V9c0-1.103-.897-2-2-2zM4 11h4v8H4v-8zm6-1V4h4v15h-4v-9zm10 9h-4V9h4v10z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="#"><span class="text nav-text">Relatórios</span></a>
+                    </div>
+
+                    <div class="link">
+                        <div class="link-icon">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M16 12h2v4h-2z"></path><path d="M20 7V5c0-1.103-.897-2-2-2H5C3.346 3 2 4.346 2 6v12c0 2.201 1.794 3 3 3h15c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zM5 5h13v2H5a1.001 1.001 0 0 1 0-2zm15 14H5.012C4.55 18.988 4 18.805 4 18V8.815c.314.113.647.185 1 .185h15v10z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="#"><span class="text nav-text">Objetivos</span></a>
+                    </div>
+
+                    <div class="link">
+                        <div class="link-icon">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 2A10.13 10.13 0 0 0 2 12a10 10 0 0 0 4 7.92V20h.1a9.7 9.7 0 0 0 11.8 0h.1v-.08A10 10 0 0 0 22 12 10.13 10.13 0 0 0 12 2zM8.07 18.93A3 3 0 0 1 11 16.57h2a3 3 0 0 1 2.93 2.36 7.75 7.75 0 0 1-7.86 0zm9.54-1.29A5 5 0 0 0 13 14.57h-2a5 5 0 0 0-4.61 3.07A8 8 0 0 1 4 12a8.1 8.1 0 0 1 8-8 8.1 8.1 0 0 1 8 8 8 8 0 0 1-2.39 5.64z"></path><path d="M12 6a3.91 3.91 0 0 0-4 4 3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4zm0 6a1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2 1.91 1.91 0 0 1-2 2z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="#"><span class="text nav-text">Perfil</span></a>
+                    </div>
+
+                    <div class="link">
+                        <div class="link-icon">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M12 16c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.084 0 2 .916 2 2s-.916 2-2 2-2-.916-2-2 .916-2 2-2z"></path><path d="m2.845 16.136 1 1.73c.531.917 1.809 1.261 2.73.73l.529-.306A8.1 8.1 0 0 0 9 19.402V20c0 1.103.897 2 2 2h2c1.103 0 2-.897 2-2v-.598a8.132 8.132 0 0 0 1.896-1.111l.529.306c.923.53 2.198.188 2.731-.731l.999-1.729a2.001 2.001 0 0 0-.731-2.732l-.505-.292a7.718 7.718 0 0 0 0-2.224l.505-.292a2.002 2.002 0 0 0 .731-2.732l-.999-1.729c-.531-.92-1.808-1.265-2.731-.732l-.529.306A8.1 8.1 0 0 0 15 4.598V4c0-1.103-.897-2-2-2h-2c-1.103 0-2 .897-2 2v.598a8.132 8.132 0 0 0-1.896 1.111l-.529-.306c-.924-.531-2.2-.187-2.731.732l-.999 1.729a2.001 2.001 0 0 0 .731 2.732l.505.292a7.683 7.683 0 0 0 0 2.223l-.505.292a2.003 2.003 0 0 0-.731 2.733zm3.326-2.758A5.703 5.703 0 0 1 6 12c0-.462.058-.926.17-1.378a.999.999 0 0 0-.47-1.108l-1.123-.65.998-1.729 1.145.662a.997.997 0 0 0 1.188-.142 6.071 6.071 0 0 1 2.384-1.399A1 1 0 0 0 11 5.3V4h2v1.3a1 1 0 0 0 .708.956 6.083 6.083 0 0 1 2.384 1.399.999.999 0 0 0 1.188.142l1.144-.661 1 1.729-1.124.649a1 1 0 0 0-.47 1.108c.112.452.17.916.17 1.378 0 .461-.058.925-.171 1.378a1 1 0 0 0 .471 1.108l1.123.649-.998 1.729-1.145-.661a.996.996 0 0 0-1.188.142 6.071 6.071 0 0 1-2.384 1.399A1 1 0 0 0 13 18.7l.002 1.3H11v-1.3a1 1 0 0 0-.708-.956 6.083 6.083 0 0 1-2.384-1.399.992.992 0 0 0-1.188-.141l-1.144.662-1-1.729 1.124-.651a1 1 0 0 0 .471-1.108z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <a href="#"><span class="text nav-text">Configurações</span></a>
+                    </div>
+                </ul>
             </div>
 
-            <div class="saldosBox">
-                <img src="/images/img-dashboard/icon-verde.png" alt="Ícone de seta vermelha para baixo">
-                <div>
-                    <p class="subTitleSaldos">Despesas</p>
-                    <p class="cifraoSaldos">R$00,00</p>
+        </section>
+
+        <section class="bottom-content">
+            <div class="logout-icon-text">
+                <div class="logout-icon">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <a href="#"><span class="text nav-text">Logout</span></a>
+            </div>
+
+            <div class="mode">
+                <div class="sun-moon">
+                    <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M20.742 13.045a8.088 8.088 0 0 1-2.077.271c-2.135 0-4.14-.83-5.646-2.336a8.025 8.025 0 0 1-2.064-7.723A1 1 0 0 0 9.73 2.034a10.014 10.014 0 0 0-4.489 2.582c-3.898 3.898-3.898 10.243 0 14.143a9.937 9.937 0 0 0 7.072 2.93 9.93 9.93 0 0 0 7.07-2.929 10.007 10.007 0 0 0 2.583-4.491 1.001 1.001 0 0 0-1.224-1.224zm-2.772 4.301a7.947 7.947 0 0 1-5.656 2.343 7.953 7.953 0 0 1-5.658-2.344c-3.118-3.119-3.118-8.195 0-11.314a7.923 7.923 0 0 1 2.06-1.483 10.027 10.027 0 0 0 2.89 7.848 9.972 9.972 0 0 0 7.848 2.891 8.036 8.036 0 0 1-1.484 2.059z"></path>
+                    </svg>
+                    <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M6.993 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007S14.761 6.993 12 6.993 6.993 9.239 6.993 12zM12 8.993c1.658 0 3.007 1.349 3.007 3.007S13.658 15.007 12 15.007 8.993 13.658 8.993 12 10.342 8.993 12 8.993zM10.998 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2h-3zm17 0h3v2h-3zM4.219 18.363l2.12-2.122 1.415 1.414-2.12 2.122zM16.24 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.342 7.759 4.22 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"></path>
+                    </svg>
+                </div>
+
+                <span class="mode-text text">Noturno</span>
+
+                <div class="toggle-switch">
+                    <span class="switch"></span>
                 </div>
             </div>
         </section>
-
-        <main>
-            
+    </nav>
+        <main id="content">
+                <h3 id="titleContent">Dashboard</h3>
+                <section class="saldos">
+                    <div class="saldosBox">
+                        <img src="/images/img-dashboard/icon-moeda.png" alt="Ícone de uma moeda">
+                        <div>
+                            <p class="subTitleSaldos">Saldo Atual</p>
+                            <p class="cifraoSaldos">R$00,00</p>
+                        </div>
+                    </div>
+                    <div class="saldosBox">
+                        <img src="/images/img-dashboard/icon-verde.png" alt="Ícone de seta verde para baixo">
+                        <div>
+                            <p class="subTitleSaldos">Receitas</p>
+                            <p class="cifraoSaldos">R$00,00</p>
+                        </div>
+                    </div>
+                    <div class="saldosBox">
+                        <img src="/images/img-dashboard/icon-verde.png" alt="Ícone de seta vermelha para baixo">
+                        <div>
+                            <p class="subTitleSaldos">Despesas</p>
+                            <p class="cifraoSaldos">R$00,00</p>
+                        </div>
+                    </div>
         </main>
     </section>
-
+    <!-- links javascript -->
+    <script src="/sidebar.js"></script>
 </body>
 
 </html>
