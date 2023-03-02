@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap'); /* Fonte Arimo */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); /* Fonte Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap'); /* Fonte Hank Grotesk */
 
 *{
     margin: 0;
@@ -8,46 +9,64 @@
     text-decoration: none;
 }
 
+html {
+    /* a cada 1rem será considerado 10px */
+    font-size: 62.5%;
+}
 
-section {
+body {
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;
+
+    height: 100vh;
+}
+
+#content {
     background: #F5F5F5;
     border: 1px solid black;
     float: right;
     width: 90%;
-    height: 50rem;
+    height: 100vh;
+}
+
+#titleContent {
+    font-size: 2.5rem;
+    font-family: 'Hanken Grotesk', sans-serif;
 }
 
 .saldos {
-    width: 50rem;
-    height: 100px;
+    width: 100%;
+    height: auto;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-.miniBox {
+#content .saldos .saldosBox {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
     padding: 1rem;
 
-    width: 11rem;
-    height: 4rem;
+    width: 15%;
+    height: auto;
 
     background: #FFFFFF;
     border: 0.1rem solid #D6DFE1;
     border-radius: 0.4rem;
 }
 
-.miniBox img {
-    width: 30%;
+#content .saldos .saldosBox img {
+    width: 5rem;
 }
 
-.miniBox .pSaldos {
+#content .saldos .saldosBox .subTitleSaldos {
     font-family: 'Arimo', sans-serif;
+    color: #545454;
 }
 
-.miniBox .pCifrao {
+#content .saldos .saldosBox .cifraoSaldos {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }

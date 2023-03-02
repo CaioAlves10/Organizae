@@ -132,14 +132,14 @@ input[type="submit"]:hover {
     color: #ffffff;
     left: 0px;
     height: 20px;
-    width: 340px;
-    padding: 17px 30px 20px 30px;
+    width: 350px;
+    padding: 17px 30px 46px 30px;
     font-size: 16px;
     text-align: right;
     border-top: 1px solid #ffffff;
 
     -webkit-border-radius: 0 0 5px 5px;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 14px 14px;
 }
 
 .link a {
@@ -163,8 +163,8 @@ input[type="submit"]:hover {
     border: 1px solid #4ab3c6;
 }
 
-#cadastro,
-#login {
+#login,
+#cadastro {
     position: absolute;
     top: 0px;
     width: 88%;
@@ -186,8 +186,8 @@ input[type="submit"]:hover {
 }
 
 /* Efeito ao clicar no botão ( Ir para Login ) */
-#paracadastro:target~.content #cadastro,
-#paralogin:target~.content #login {
+#paralogin:target~.content #login,
+#paracadastro:target~.content #cadastro {
     z-index: 2;
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
@@ -197,8 +197,8 @@ input[type="submit"]:hover {
 }
 
 /* Efeito ao clicar no botão ( Cadastre-se ) */
-#registro:target~.content #login,
-#paralogin:target~.content #cadastro {
+#paralogin:target~.content #cadastro,
+#registro:target~.content #login {
     -webkit-animation-name: fadeOutLeft;
     animation-name: fadeOutLeft;
 }
