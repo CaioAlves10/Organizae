@@ -40,7 +40,8 @@
     background-color: #004AAD;
     border: 0; border-radius: 15px;
 }
-.entrar-p{
+.entrar-link{
+    color: #DBE1F4;
     font-size: 20px;
     font-weight: 700;
 }
@@ -193,9 +194,11 @@
     padding-left: 50px; padding-right: 50px; padding-top: 10px; padding-bottom: 10px;
     border-radius: 30px; border-color: #1039B4;
     background-color: #1039B4;
+    margin-bottom: 200px;
+}
+.button-cadastre-se a{
     color: #F5F5F5;
     font-size: 20px;
-    margin-bottom: 200px;
 }
 .abstrata-final{
     width: 700px;
