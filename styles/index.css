@@ -8,16 +8,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
+body{
+    width: 100%;
+}
+
 /* primeira parte (inicio) */
 .inicio{
     background-color: #DBE1F4;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 }
 .first{
     font-family: 'Roboto Condensed', sans-serif;
-    margin: 150px;
+    margin: 15%;
 }
 .title1{
     font-size: 65px;
@@ -45,39 +50,31 @@
     font-weight: 700;
 }
 .img-cartao{
-    width: 700px;
-    margin-top: 50px; margin-bottom: 60px;
+    width: 90%;
+    margin-top: 5%; margin-bottom: 6%;
 }
 /* segunda parte (missao, visao, valores) */
 .missao-visao-valores{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #F5F5F5;
 }
 .img-missao, .img-visao, .img-valores{
     width: 150px;
-    margin-top: 60px;
 }
 .missao-title, .visao-title, .valores-title{
-    font-family: 'Poppins', sans-serif;
     font-size: 25px;
+    margin: 5%;
 }
 .missao-p, .visao-p ,.valores-p{
-    margin-top: 9px;
-    margin-bottom: 80px;
-    font-family: 'Poppins', sans-serif;
     font-size: 18px;
 }
-.missao{
-    margin-left: 200px;
-}
-.valores{
-    margin-right: 200px;
-}
 .missao, .visao, .valores{
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
+    margin: 5%;
     align-items: center;
 }
 /* terceira parte (sobre nos) */
@@ -202,3 +199,35 @@
 }
 
 /* Responsividade */
+
+@media (max-width: 1000px) {
+    .first{
+        margin: 7%;
+    }
+    .title1{
+        font-size: 45px;
+    }
+    .text1{
+        font-size: 22px;
+        margin-top: 50px;
+    }
+    .missao-visao-valores{
+        display: flex;
+        flex-direction: column;
+    }
+    .missao, .visao, .valores{
+        margin-bottom: 50px;
+    }
+    .textos-sobrenos{
+        margin-left: 7%;
+    }
+    .title2{
+        font-size: 50px;
+    }
+    .sobrenos-p1{
+        margin-top: 50px;
+    }
+    .sobrenos-p2{
+        margin-top:60px;
+    }
+}
