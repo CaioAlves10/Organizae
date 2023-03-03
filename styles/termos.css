@@ -13,7 +13,7 @@ body {
 }
 
 main {
-    padding: 100px 300px;
+    padding: 8% 20%;
     text-align: justify;
 }
 
@@ -30,6 +30,3 @@ main p {
 h3 {
     text-align: center;
 }
-
-/* MEDIA QUERY */
-
