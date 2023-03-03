@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap'); /* Fonte Arimo */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); /* Fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); /* Fonte Inter */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); /* Fonte Open Sans */
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap'); /* Fonte Hank Grotesk */
 
 *{
     margin: 0;
@@ -9,9 +9,17 @@
     text-decoration: none;
 }
 
-html {
-    /* a cada 1rem será considerado 10px */
-    font-size: 62.5%;
+:root {
+    /* ===== Colors ===== */
+    --text-color: #707070;
+    --box-color: #FFF;
+
+    --title: #707070;
+    --sidebar-color: #FFF;
+    --primary-color: #87AFE8;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --icon-color: #FFF;
 }
 
 body {
@@ -21,52 +29,114 @@ body {
     height: 100vh;
 }
 
-#content {
-    background: #F5F5F5;
-    border: 1px solid black;
-    float: right;
-    width: 90%;
-    height: 100vh;
+body.dark {
+    --text-color: #ccc;
+    
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --icon-color: #FFF;
 }
 
-#titleContent {
-    font-size: 2.5rem;
-    font-family: 'Hanken Grotesk', sans-serif;
+html {
+    /* a cada 1rem será considerado 10px */
+    font-size: 62.5%;
 }
+
+#FirstTitle {
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+
+    padding: 5rem 15rem;
+} 
 
 .saldos {
-    width: 100%;
+    width: 94%;
     height: auto;
+    float: right;
 
     display: flex;
     justify-content: space-evenly;
 }
 
-#content .saldos .saldosBox {
+.saldos .saldosBox {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
-
-    width: 15%;
+    justify-content: space-evenly;
+    
+    width: 25rem;
     height: auto;
+    padding: 2rem 1rem;
 
-    background: #FFFFFF;
+    background: var(--box-color);
     border: 0.1rem solid #D6DFE1;
-    border-radius: 0.4rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-#content .saldos .saldosBox img {
+.saldos .saldosBox img {
     width: 5rem;
 }
 
-#content .saldos .saldosBox .subTitleSaldos {
-    font-family: 'Arimo', sans-serif;
+.saldos .saldosBox .subTitleSaldos {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
     color: #545454;
+
+    margin-bottom: 0.5rem;
 }
 
-#content .saldos .saldosBox .cifraoSaldos {
-    font-family: 'Open Sans', sans-serif;
+.saldos .saldosBox .cifraoSaldos {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
     font-weight: bold;
+
+}
+
+
+main {
+    width: 95%;
+    height: 38%;
+    margin-top: 10rem;
+    float: right;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mainBoxes {
+    width: 500px;
+    height: 450px;
+
+    background: var(--box-color);
+    border: 0.1rem solid #D6DFE1;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.mainTitles {
+    color: var(--text-color);
+    margin: 3rem 3rem 0;
+}
+
+main .mainBoxes div {
+    background-color: green;
+    margin: 2.5rem auto;
+    width: 60%;
+    height: 60%;
+}
+
+main .mainBoxes button {
+    margin: 0 10% 3rem;
+    padding: 1rem 2rem;
+    width: 80%;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8rem;
+
+    border: 0.1rem solid #D6DFE1;
+    border-radius: 1rem;
 }
