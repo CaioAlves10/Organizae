@@ -13,20 +13,46 @@ body {
 }
 
 main {
-    padding: 8% 20%;
+    padding: 7% 20%;
     text-align: justify;
 }
 
 main p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-}
-
-.texto {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 30px;
 }
 
 h3 {
     text-align: center;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 1024px) {
+    main {
+        padding: 7% 15%;
+    }
+}
+
+@media (max-width: 870px) {
+    main p, h3 {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 690px) {
+    main {
+        padding: 7% 11%;
+    }
+
+    main p, h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 370px) {
+    main p, h3 {
+        font-size: 14px;
+    }
 }
