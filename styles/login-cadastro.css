@@ -31,7 +31,7 @@ a.links {
 .content {
     width: 350px;
     min-height: 530px;
-    margin: 40px auto; 
+    margin: 50px auto; 
     position: relative;
 }
 
@@ -133,7 +133,7 @@ input[type="submit"]:hover {
     left: 0px;
     height: 20px;
     width: 348px;
-    padding: 17px 30px 46px 30px;
+    padding: 22px 30px 46px 30px;
     font-size: 16px;
     text-align: right;
     border-top: 1px solid #ffffff;
@@ -250,5 +250,50 @@ input[type="submit"]:hover {
     100% {
         opacity: 0;
         transform: translateX(-20px);
+    }
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 421px) {
+    .content {
+        width: 320px;
+        margin: 50px auto; 
+    }
+    
+    .link {
+        height: 20px;
+        width: 318px;
+        padding: 22px 27px 38px 0px;
+    }
+
+    .link a {
+        padding: 6px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 350px) {
+    .content {
+        width: 280px;
+        margin: 50px auto; 
+    }
+    
+    .link {
+        height: 20px;
+        width: 279px;
+        padding: 22px 16px 38px 0px;
+        font-size: 15px;
+    }
+
+    .link a {
+        padding: 6px;
+        margin-left: 10px;
+        font-size: 13px;
     }
 }
