@@ -24,9 +24,7 @@
 
 body {
     font-size: 1.6rem;
-    font-family: 'Inter', sans-serif;
-
-    height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
 
 body.dark {
@@ -45,16 +43,33 @@ html {
     font-size: 62.5%;
 }
 
+#container {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.sidebar.close ~ #container {
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+
 #FirstTitle {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 500;
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
 
-    padding: 5rem 15rem;
+    padding: 4rem 60px;
 } 
 
-.saldos {
-    width: 94%;
+.balance {
+    width: 100%;
     height: auto;
     float: right;
 
@@ -62,14 +77,14 @@ html {
     justify-content: space-evenly;
 }
 
-.saldos .saldosBox {
+.balance .balanceBox {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     
-    width: 25rem;
+    width: 23rem;
     height: auto;
-    padding: 2rem 1rem;
+    padding: 1.4rem 0rem;
 
     background: var(--box-color);
     border: 0.1rem solid #D6DFE1;
@@ -77,66 +92,85 @@ html {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.saldos .saldosBox img {
-    width: 5rem;
+.balance .balanceBox img {
+    width: 5.5rem;
 }
 
-.saldos .saldosBox .subTitleSaldos {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
-    color: #545454;
-
-    margin-bottom: 0.5rem;
+.balance .balanceBox .subTitleBalance {
+    font-size: 1.7rem;
+    color: var(--text-color);
 }
 
-.saldos .saldosBox .cifraoSaldos {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
+.balance .balanceBox .moneyBalance {
+    font-size: 1.7rem;
     font-weight: bold;
 
 }
 
-
 main {
-    width: 95%;
-    height: 38%;
-    margin-top: 10rem;
+    width: 100%;
+    height: 52%;
+    margin-top: 6rem;
     float: right;
 
     display: flex;
     justify-content: space-evenly;
 }
 
-.mainBoxes {
-    width: 500px;
-    height: 450px;
+.mainBox {
+    width: 40rem;
+    height: 40rem;
 
     background: var(--box-color);
-    border: 0.1rem solid #D6DFE1;
-    border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 1rem;
 }
 
 .mainTitles {
+    font-weight: 500;
     color: var(--text-color);
-    margin: 3rem 3rem 0;
+
+    margin: 3rem 4rem 0;
 }
 
-main .mainBoxes div {
-    background-color: green;
+main .mainBox div {
+    background-color: rgb(209, 209, 209);
     margin: 2.5rem auto;
-    width: 60%;
-    height: 60%;
+    width: 50%;
+    height: 50%;
 }
 
-main .mainBoxes button {
+main .mainBox button {
+    width: 80%;
     margin: 0 10% 3rem;
     padding: 1rem 2rem;
-    width: 80%;
 
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    font-weight: 700; 
+    color: #fff;
+    cursor: pointer;
 
-    border: 0.1rem solid #D6DFE1;
-    border-radius: 1rem;
+    white-space: nowrap;
+    
+    appearance: none;
+    background-color: #87afe8;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+}
+
+main .mainBox button:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+
+main .mainBox button:hover {
+    background-color: #6ca3ef;
+}
+
+main .mainBox button:active {
+    background-color: #518bdd;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
