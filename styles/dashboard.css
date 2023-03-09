@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); /* Fonte Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); /* Fonte Inter */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); /* Fonte Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* Fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/* Fonte Inter */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* Fonte Open Sans */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,7 +32,7 @@ body {
 
 body.dark {
     --text-color: #ccc;
-    
+
     --body-color: #18191a;
     --sidebar-color: #242526;
     --primary-color: #3a3b3c;
@@ -53,7 +56,7 @@ html {
     transition: var(--tran-05);
 }
 
-.sidebar.close ~ #container {
+.sidebar.close~#container {
     left: 78px;
     height: 100vh;
     width: calc(100% - 78px);
@@ -66,7 +69,7 @@ html {
     color: var(--text-color);
 
     padding: 4rem 60px;
-} 
+}
 
 .balance {
     width: 100%;
@@ -81,7 +84,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
+
     width: 23rem;
     height: auto;
     padding: 1.4rem 0rem;
@@ -99,31 +102,23 @@ html {
 .balance .balanceBox .subTitleBalance {
     font-size: 1.7rem;
     color: var(--text-color);
+    margin-bottom: 0;
 }
 
 .balance .balanceBox .moneyBalance {
     font-size: 1.7rem;
     font-weight: bold;
-
+    margin-bottom: 0;
 }
 
 main {
     width: 100%;
     height: 52%;
-    margin-top: 6rem;
+    margin-top: 8rem;
     float: right;
 
     display: flex;
     justify-content: space-evenly;
-}
-
-.mainBox {
-    width: 40rem;
-    height: 40rem;
-
-    background: var(--box-color);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border-radius: 1rem;
 }
 
 .mainTitles {
@@ -133,26 +128,135 @@ main {
     margin: 3rem 4rem 0;
 }
 
-main .mainBox div {
-    background-color: rgb(209, 209, 209);
-    margin: 2.5rem auto;
-    width: 50%;
-    height: 50%;
+.mainBox {
+    width: 40rem;
+    height: 43rem;
+
+    background: var(--box-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 1rem;
 }
 
-main .mainBox button {
+/* TABLE */
+
+main .mainBox div .table-sm {
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+
+    margin: 2rem auto 2.4rem;
     width: 80%;
-    margin: 0 10% 3rem;
+    height: 49.5%;
+}
+
+/* GRAFIC */
+
+.mainCategory {
+    width: 80rem;
+}
+
+main .mainBox .mainGrafic {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    background-color: transparent;
+    margin: 2.5rem auto;
+    width: 90%;
+    height: 55.5%;
+}
+
+@property --p {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+}
+
+.pie {
+    --p: 20;
+    --b: 22px;
+    --c: darkred;
+    --w: 150px;
+
+    width: var(--w);
+    aspect-ratio: 1;
+    position: relative;
+    display: inline-grid;
+    margin: 5px;
+    place-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.pie:before,
+.pie:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.pie:before {
+    inset: 0;
+    background:
+        radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
+        conic-gradient(var(--c) calc(var(--p)*1%), #0000 0);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+    mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
+}
+
+.pie:after {
+    inset: calc(50% - var(--b)/2);
+    background: var(--c);
+    transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+
+.animate {
+    animation: p 1s .5s both;
+}
+
+.no-round:before {
+    background-size: 0 0, auto;
+}
+
+.no-round:after {
+    content: none;
+}
+
+@keyframes p {
+    from {
+        --p: 0
+    }
+}
+
+.graficDatas {
+    font-size: 1.7rem;
+}
+
+.graficDatas h3 {
+    margin-bottom: 1rem;
+}
+
+.graficDatas p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* BUTTON */
+
+main .mainBox button {
+    width: 90%;
+    margin: 1rem 5% 0;
     padding: 1rem 2rem;
 
     font-family: 'Open Sans', sans-serif;
     font-size: 1.7rem;
-    font-weight: 700; 
+    font-weight: 700;
     color: #fff;
     cursor: pointer;
 
     white-space: nowrap;
-    
+
     appearance: none;
     background-color: #87afe8;
     border: 1px solid rgba(27, 31, 35, 0.15);
