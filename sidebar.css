@@ -75,6 +75,10 @@ body.dark {
     transition: var(--tran-03);
 }
 
+.menu-links {
+    padding-left: 0;
+}
+
 .sidebar section .menu ul .link,
 .sidebar .bottom-content .logout-icon-text {
     display: flex;
