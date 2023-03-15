@@ -4,9 +4,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+/* dark/light mode config */
 
+body {
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
 :root {
     /* ===== Colors ===== */
     --body-color: #E4E9F7;
@@ -22,18 +29,10 @@
     --tran-04: all 0.3s ease;
     --tran-05: all 0.3s ease;
 }
-
-body {
-    min-height: 100vh;
-    background-color: var(--body-color);
-    transition: var(--tran-05);
-}
-
 ::selection {
     background-color: var(--primary-color);
     color: var(--sidebar-color);
 }
-
 body.dark {
     --body-color: #18191a;
     --sidebar-color: #242526;
@@ -43,7 +42,91 @@ body.dark {
     --text-color: #ccc;
     --icon-color: #FFF;
 }
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--toggle-color);
+    transition: var(--tran-05);
+}
+span.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: var(--sidebar-color);
+    transition: var(--tran-04);
+}
 
+body.dark span.switch::before {
+    left: 20px;
+}
+
+/* mode */
+.sidebar .bottom-content .mode {
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    position: relative;
+    transition: var(--tran-05);
+
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .bottom-content .mode .sun-moon {
+    height: 50px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .bottom-content .mode .sun-moon svg {
+    position: relative;
+}
+
+.mode .sun-moon svg.sun {
+    display: none;
+}
+
+.mode .sun-moon svg.moon {
+    fill: var(--text-color);
+}
+
+.sidebar.close .mode .sun-moon svg.moon {
+    display: none;
+}
+
+
+body.dark .mode .sun-moon svg.sun {
+    display: block;
+    fill: var(--text-color);
+}
+
+body.dark .sidebar.close .mode .sun-moon svg.sun {
+    display: none;
+}
+
+body.dark .mode .sun-moon svg.moon {
+    display: none;
+}
+
+.sidebar .bottom-content .toggle-switch {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
 /* ===== Sidebar ===== */
 .sidebar {
     position: fixed;
@@ -221,92 +304,4 @@ body.dark .sidebar header .toggle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-/* Mode */
-
-.sidebar .bottom-content .mode {
-    border-radius: 6px;
-    background-color: var(--primary-color-light);
-    position: relative;
-    transition: var(--tran-05);
-
-    display: flex;
-    align-items: center;
-}
-
-.sidebar .bottom-content .mode .sun-moon {
-    height: 50px;
-    width: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.sidebar .bottom-content .mode .sun-moon svg {
-    position: relative;
-}
-
-.mode .sun-moon svg.sun {
-    display: none;
-}
-
-.mode .sun-moon svg.moon {
-    fill: var(--text-color);
-}
-
-.sidebar.close .mode .sun-moon svg.moon {
-    display: none;
-}
-
-
-body.dark .mode .sun-moon svg.sun {
-    display: block;
-    fill: var(--text-color);
-}
-
-body.dark .sidebar.close .mode .sun-moon svg.sun {
-    display: none;
-}
-
-body.dark .mode .sun-moon svg.moon {
-    display: none;
-}
-
-.sidebar .bottom-content .toggle-switch {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    min-width: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.toggle-switch .switch {
-    position: relative;
-    height: 22px;
-    width: 40px;
-    border-radius: 25px;
-    background-color: var(--toggle-color);
-    transition: var(--tran-05);
-}
-
-span.switch::before {
-    content: '';
-    position: absolute;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    background-color: var(--sidebar-color);
-    transition: var(--tran-04);
-}
-
-body.dark span.switch::before {
-    left: 20px;
 }

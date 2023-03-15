@@ -45,6 +45,10 @@ body{
     background-color: #004AAD;
     border: 0; border-radius: 15px;
 }
+.entrar:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0 6px 13px;
+    transform: translateY(-2px);
+}
 .entrar-link{
     color: #DBE1F4;
     font-size: 20px;
@@ -191,11 +195,16 @@ body{
     padding-left: 50px; padding-right: 50px; padding-top: 10px; padding-bottom: 10px;
     border-radius: 30px; border-color: #1039B4;
     background-color: #1039B4;
-    margin-bottom: 200px;
+    margin: 50px 0 150px;
 }
 .button-cadastre-se a{
     color: #F5F5F5;
     font-size: 20px;
+}
+.button-cadastre-se:hover{
+    background-color: #436092;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 6px 13px;
+    transform: translateY(-2px);
 }
 .abstrata-final{
     width: 700px;
@@ -232,5 +241,15 @@ body{
     }
     .sobrenos-p2{
         margin-top:60px;
+    }
+    .abstrato1{
+        width: 400px; height: 400px;
+    }
+    .funcio-p{
+        font-size: 30px;
+        margin-left: 90px; margin-right: 80px; margin-top: 70px;
+    }
+    .button-cadastre-se{
+        margin-top: 80px;
     }
 }
