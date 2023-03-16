@@ -112,6 +112,8 @@ body{
 /* quarta parte (porque escolher a gente) */
 .funcionalidades1{
     background-color: #DBE1F4;
+    display: flex;
+    flex-direction: column;
 }
 .abstrato1{
     width: 500px;
@@ -214,7 +216,7 @@ body{
 
 /* Responsividade */
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .first{
         margin: 7%;
     }
@@ -253,5 +255,139 @@ body{
     }
     .button-cadastre-se{
         margin-top: 80px;
+    }
+}
+@media (max-width: 768px) {
+    .title2{
+        font-size: 40px;
+    }
+    .abstrato1{
+        width: 300px;
+        height: 300px;
+    }
+    .title3{
+        font-size: 45px;
+    }
+    .abstrata-final{
+        width:250px;
+        height: 500px;
+    }
+    .cadastrese-foto{
+        height: 500px;
+    }
+    .cadastre-se{
+        margin-left: 160px;
+    }
+    .button-cadastre-se{
+        margin-right: 80px;
+    }
+}
+@media (max-width: 425px) {
+    .first{
+        width: 65%;
+    }
+    .title1{
+        font-size: 30px;
+    }
+    .text1{
+        font-size: 18px;
+        margin-top: 50px;
+    }
+    .img-money{
+        width: 200px;
+    }
+    .missao-p, .visao-p ,.valores-p{
+        font-size: 15px;
+        text-align: center;
+    }
+    .img-missao, .img-visao, .img-valores{
+        width: 100px;
+    }
+    .divisao1-funcio{
+        display: flex;
+        flex-direction: column;
+    }
+    .abstrato1{
+        width: 270px; height: 300px;
+    }
+    .title3{
+        font-size: 35px;
+        margin: 70px 80px 0px 90px;
+    }
+    .funcio-p{
+        font-size: 22px;
+        margin: 70px 80px 0px 60px;
+    }
+    .divisao2-funcio{
+        display: flex;
+        flex-direction: column;
+    }
+    .abstrato2{
+        margin: 70px 0px 0px 95px;
+    }
+    .categorias{
+        margin-right: 100px;
+    }
+    .graficos{
+        margin-left: 100px;
+    }
+    .cadastre-se{
+        margin: 0px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .venha-p-organizae{
+        font-size: 35px;
+        margin: 60px 0 0 100px;
+    }
+    .button-cadastre-se{
+        margin: 50px 0 0 0;
+        padding: 10px 30px;
+    }
+    .cadastro{
+        font-size: 15px;
+    }
+    .cadastrese-foto{
+        display: flex;
+        flex-direction: column;
+    }
+    .abstrata-final{
+        margin-left: 150px;
+    }
+}
+@media (max-width: 375px) {
+    .img-money{
+        width: 185px;
+    }
+    .abstrato2{
+        margin-left: 70px;
+    }
+    .abstrata-final{
+        margin-left: 100px;
+    }
+}
+@media (max-width: 320px) {
+    .img-money{
+        width: 130px;
+    }
+    .abstrato2{
+        width: 215px;
+    }
+    .categorias, .objetivos{
+        margin-right: 70px;
+        font-size: 15px;
+    }
+    .graficos{
+        margin-left: 70px;
+        font-size: 15px;
+    }
+    .cadastre-se{
+        margin-right: 40px;
+    }
+    .venha-p-organizae{
+        margin-left: 60px;
+    }
+    .abstrata-final{
+        margin-left: 70px;
     }
 }
