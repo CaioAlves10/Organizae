@@ -88,7 +88,7 @@
             <div class="cadastrese-foto">
                 <div class="cadastre-se">
                     <p class="venha-p-organizae">Venha para a <b class="negrito">Organizae</b>!</p>
-                    <button class="button-cadastre-se"><a href="/pages/login-cadastro.html#paracadastro">Cadastre-se</a></button>
+                    <button class="button-cadastre-se"><a class="submit" href="/pages/login-cadastro.html#paracadastro">Cadastre-se</a></button>
                 </div>
                 <img class="abstrata-final" src="./images/img-singlepage-index/abstrato-final-singlepage.png" alt="imagem abstrata">
             </div>
