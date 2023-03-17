@@ -132,7 +132,7 @@ body{
     font-size: 60px;
     font-weight:600;
     color: #0B1B3D;
-    margin-top: 350px; margin-bottom: 60px;
+    margin-top: 350px; margin-bottom: 60px; margin-right: 50px;
 }
 .funcio-p{
     font-family: 'Archivo Black', sans-serif;
@@ -280,6 +280,41 @@ body{
         margin-right: 80px;
     }
 }
+@media (max-width: 600px) {
+    .title3{
+        font-size: 40px;
+    }
+    .abstrato2{
+        width: 200px; height: 200px;
+        margin-top: 150px;
+    }
+    .funcio-p{
+        font-size: 25px;
+    }
+    .cadastre-se{
+        margin-left: 100px;
+    }
+    .venha-p-organizae{
+        margin-top: 280px;
+        font-size: 45px;
+    }
+    .button-cadastre-se{
+        padding: 7px 40px;
+        font-size: 15px;
+        margin: 40px 80px 0px 0px;
+    }
+    .submit{
+        font-size: 15px;
+    }
+    .cadastrese-foto{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .abstrata-final{
+        margin: 0px 100px 215px 100px;
+    }
+}
 @media (max-width: 425px) {
     .first{
         width: 65%;
@@ -350,7 +385,7 @@ body{
         flex-direction: column;
     }
     .abstrata-final{
-        margin-left: 150px;
+        margin-left: 150px; margin-bottom: 0px;
     }
 }
 @media (max-width: 375px) {
