@@ -250,6 +250,7 @@ body.dark .mode .sun-moon svg.moon {
 
 .sidebar header {
     position: relative;
+    height:auto;
 }
 
 .sidebar header .image-text {
@@ -347,14 +348,13 @@ body.dark .sidebar header .toggle {
 
     .menu-links,
     .bottom-content {
-        width: 40%;
-        margin: 0 30%;
+        width: 210px;
+        margin: 0 auto;
     }
 
-    /* .sidebar section .menu ul .link,
-    .sidebar .bottom-content .logout-icon-text {
-        width: 75%;
-    } */
+    .sidebar .bottom-content .mode {
+        width: 205px;
+    }
 
     /* shevron */
 
