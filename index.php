@@ -28,7 +28,7 @@
                     <li><a href="#funcionalidades">Funcionalidades</a></li>
                     <div class="line"></div>
                     <li><a href="#contatos">Contatos</a></li>
-                    <li><a href="/pages/login-cadastro.html#paralogin" class="buttonMenu">Login</a></li>
+                    <li><a href="/pages/login-cadastro.php#paralogin" class="buttonMenu">Login</a></li>
                 </ul>
             </div>
         </nav>

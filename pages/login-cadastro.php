@@ -44,28 +44,28 @@
 
             <!--FORMULÁRIO DE CADASTRO-->
             <div id="cadastro">
-                <form method="post" action="">
+                <form method="post" action="/php/functions/cadastro.php">
                     <h1>Cadastre-se</h1>
 
                     <p>
                         <label for="nome_cad">Seu nome</label>
-                        <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
+                        <input id="nome_cad" name="nome_cad" type="text" required placeholder="nome" />
                     </p>
 
                     <p>
                         <label for="email_cad">Seu e-mail</label>
-                        <input id="email_cad" name="email_cad" required="required" type="email"
+                        <input id="email_cad" name="email_cad" required type="email"
                             placeholder="Ex.organizae@contato.com" />
                     </p>
 
                     <p>
                         <label for="senha_cad">Sua senha</label>
-                        <input id="senha_cad" name="senha_cad" required="required" type="password"
+                        <input id="senha_cad" name="senha_cad" required type="password"
                             placeholder="Ex.1234" />
                     </p>
                     <p>
                         <label for="senha_cad">Confirme sua senha</label>
-                        <input id="senha_cad" name="senha_cad" required="required" type="password"
+                        <input id="senha_cad" name="cosenha_cad" required type="password"
                             placeholder="Ex.1234" />
                     </p>
 
@@ -82,17 +82,17 @@
 
             <!--FORMULÁRIO DE LOGIN-->
             <div id="login">
-                <form method="post" action="">
+                <form method="post" action="/php/functions/login.php">
                     <h1>Conecte-se a sua conta</h1>
                     <p>
                         <label for="nome_login">Login</label>
-                        <input id="nome_login" name="nome_login" required="required" type="text"
+                        <input id="nome_login" name="nome_login" required type="text"
                             placeholder="Ex.organizae@contato.com" />
                     </p>
 
                     <p>
                         <label for="senha_login">Senha</label>
-                        <input id="senha_login" name="senha_login" required="required" type="password"
+                        <input id="senha_login" name="senha_login" required type="password"
                             placeholder="Ex.***** " />
                     </p>
 
