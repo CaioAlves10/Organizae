@@ -74,91 +74,12 @@ p {
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-@property --p {
-  syntax: '<number>';
-  inherits: true;
-  initial-value: 1;
-}
-
-.pie {
-  --p: 20;
-  --b: 22px;
-  --c: darkred;
-  --w: 150px;
-
-  width: var(--w);
-  aspect-ratio: 1;
-  position: relative;
-  display: inline-grid;
-  margin: 5px;
-  place-content: center;
-  font-size: 25px;
-  font-weight: bold;
-  font-family: sans-serif;
-}
-
-.pie:before,
-.pie:after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-}
-
-.pie:before {
-  inset: 0;
-  background:
-      radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b) var(--b) no-repeat,
-      conic-gradient(var(--c) calc(var(--p)*1%), #0000 0);
-  -webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
-  mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
-}
-
-.pie:after {
-  inset: calc(50% - var(--b)/2);
-  background: var(--c);
-  transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
-}
-
-.animate {
-  animation: p 1s .5s both;
-}
-
-.no-round:before {
-  background-size: 0 0, auto;
-}
-
-.no-round:after {
-  content: none;
-}
-
-@keyframes p {
-  from {
-      --p: 0
-  }
-}
-
-p {
-
-  padding-left: 15px;
-  padding-top: 5px;
-}
-
-/*css do botão*/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
 }
 
 body {
     background-color: transparent;
-body {
-  background-color: transparent;
 }
 
-#titulo {
 #titulo {
 
     margin: 23px;
@@ -181,20 +102,6 @@ body {
     margin-bottom: 5px;
     padding: 10px;
     font-size: 12px;
-#button {
-  margin-left: 50%;
-  
-  font-weight: bold;
-  border: 0px;
-  width: 100px;
-  color: white;
-  background-color: #81C3E2;
-  border-radius: 20px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  padding: 10px;
-  font-size: 12px;
-  
 }
 
 
@@ -202,10 +109,6 @@ body {
 #conteudo {
     display: flex;
     text-align: center;
-
-#conteudo{
- display: flex;
- text-align: center;
 }
 
 #mainBox {
@@ -291,16 +194,6 @@ body {
     p{
         font-size: 15px;
     }
-#mainBox {
-  padding: 100px;
-  margin: 300px;
-  /* colocar uma borda preta bem fina para ver a mudança do cinza para o branco 
-  border: 10px black;
-  border-radius: 20px;
-   */
-  background-color: white;
-
-
 }
 
 @media(max-width: 425px) {
@@ -374,210 +267,8 @@ body {
     p{
         font-size: 14px;
     }
-
-.screen {
-  margin-left: 380px;
-  width: 700px;
-  height: 400px;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  margin-bottom: 15px;
 }
 
-@media (max-width: 1345px) {
-
-  .screen {
-      margin-left: 360px;
-      width: 700px;
-      height: 400px;
-      background-color: #ffffff;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-      margin-bottom: 15px;
-  }
-  
-}
-
-@media (max-width: 1263px) {
-
-  .screen {
-      margin-left: 350px;
-      width: 700px;
-      height: 400px;
-      background-color: #ffffff;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-      margin-bottom: 15px;
-  }
-  
-}
-
-@media (max-width: 1024px) {
-
-  .screen {
-      margin-left: 200px;
-      width: 700px;
-      height: 400px;
-      background-color: #ffffff;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-      margin-bottom: 15px;
-  }
-  
-}
-
-@media (max-width: 768px) {
-
-  .screen {
-      margin-left: 100px;
-      width: 650px;
-      height: 400px;
-      background-color: #ffffff;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-      margin-bottom: 15px;
-  }
-  
-}
-
-@media (max-width: 425px) {
-
-  .screen {
-      margin-left: 108px;
-      width: 300px;
-      height: 350px;
-      background-color: #ffffff;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-      margin-bottom: 15px;
-  }
-
-  h1{
-      font-size: 22px;
-  }
-
-  h3{
-      padding-top: 20px;
-      font-size: 15px;
-  }
-
-  p{
-      font-size: small;
-  }
-  
-  .pie {
-      --p: 20;
-      --b: 6px;
-      --c: darkred;
-      --w: 90px;
-  
-      width: var(--w);
-      aspect-ratio: 1;
-      position: relative;
-      display: inline, flex;
-      margin: 5px;
-      place-content: center;
-      font-size: 14px;
-      font-weight: bold;
-      font-family: sans-serif;
-      margin-left: 0px;
-  }
-
-  
-}
-
-@media (max-width: 375px) {
-
-  .screen {
-      margin-left: 97px;
-      width: 270px;
-      height: 390px;
-      background-color: #ffffff;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-      margin-bottom: 15px;
-  }
-
-  h1{
-      font-size: 22px;
-  }
-
-  h3{
-      padding-top: 30px;
-      font-size: 15px;
-  }
-
-  p{
-      font-size: small;
-  }
-  
-  .pie {
-      --p: 20;
-      --b: 6px;
-      --c: darkred;
-      --w: 80px;
-  
-      width: var(--w);
-      aspect-ratio: 1;
-      position: relative;
-      display: inline, flex;
-      margin: 5px;
-      place-content: center;
-      font-size: 14px;
-      font-weight: bold;
-      font-family: sans-serif;
-      margin-left: 0px;
-  }
-
-  
-}
-
-@media (max-width: 320px) {
-
-  .screen {
-      margin-left: 97px;
-      width: 270px;
-      height: 360px;
-      background-color: #ffffff;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-      margin-bottom: 15px;
-  }
-
-  h1{
-      font-size: 22px;
-  }
-
-  h3{
-      padding-top: 30px;
-      font-size: 15px;
-  }
-
-  p{
-      font-size: small;
-  }
-  
-  .pie {
-      --p: 20;
-      --b: 6px;
-      --c: darkred;
-      --w: 60px;
-  
-      width: var(--w);
-      aspect-ratio: 1;
-      position: relative;
-      display: inline, flex;
-      margin: 5px;
-      place-content: center;
-      font-size: 12px;
-      font-weight: bold;
-      font-family: sans-serif;
-      margin-left: 0px;
-  }
-
-  
-}
 @media(max-width: 320px) {
     .screen {
         width: 600px;
