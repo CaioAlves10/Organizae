@@ -114,7 +114,7 @@ html {
 main {
     width: 100%;
     height: 52%;
-    margin-top: 8rem;
+    margin-top: 5%;
     float: right;
 
     display: flex;
@@ -129,8 +129,8 @@ main {
 }
 
 .mainBox {
-    width: 40rem;
-    height: 43rem;
+    width: 30%;
+    height: 420px;
 
     background: var(--box-color);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -151,7 +151,7 @@ main .mainBox div .table-sm {
 /* GRAFIC */
 
 .mainCategory {
-    width: 80rem;
+    width: 60%;
 }
 
 main .mainBox .mainGrafic {
@@ -279,21 +279,114 @@ main .mainBox button:active {
     box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
 
+
+/* MEDIA QUERY */
+
+@media (max-width: 1440px) {
+    main {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .mainTitles {
+        font-size: 2.0rem;
+    }
+}
+
+@media (max-width: 1343px) {
+    main .mainBox .mainGrafic {
+        justify-content: space-between;
+    }  
+
+    main .mainBox div .table-sm {
+        font-size: 1.5rem;
+    }    
+
+    .pie {
+        --w: 135px;
+    }
+}
+
+@media (max-width: 1301px) {
+    .pie {
+        --w: 130px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .mainBox {
+        width: 32%;
+    }
+    
+    .mainCategory {
+        width: 57%;
+    }
+    
+    .pie {
+        --w: 117px;
+    }
+}
+
+@media (max-width: 1220px) {
+    .mainBox {
+        width: 33%;
+    }
+    
+    .mainCategory {
+        width: 56%;
+    }
+    
+    .pie {
+        --w: 110px;
+    }
+}
+
+@media (max-width: 1200px) {
+    main {
+        width: 100%;
+        height: 100%;
+        margin-top: 5%;
+        float: right;
+    
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 1107px) {
+    .mainBox {
+        width: 33%;
+    }
+
+    main .mainBox .mainGrafic {
+        justify-content: none;
+    }
+
+    .mainCategory {
+        width: 56%;
+    }
+
+    .pie {
+        --w: 123px;
+        font-size: 22px;
+    }
+}
+
 @media (max-width: 600px) {
     #container {
         position: absolute;
         top: 75px;
         left: 0;
         width: 100vw;
-        /* left: 250px; */
-        /* height: calc(100% - 250px); */
     }
     
     .sidebar.close~#container {
         top: 75px;
         left: 0;
         width: 100vw;
-        /* height: calc(100% - 78px); */
     }
 
     #FirstTitle {
