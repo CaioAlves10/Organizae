@@ -115,6 +115,7 @@ main {
     width: 100%;
     height: 52%;
     margin-top: 5%;
+    margin-bottom: 5%;
     float: right;
 
     display: flex;
@@ -283,33 +284,49 @@ main .mainBox button:active {
 /* MEDIA QUERY */
 
 @media (max-width: 1440px) {
-    main {
+    /* main {
         margin-top: 10%;
         margin-bottom: 10%;
+    } */
+
+    .mainBox {
+        width: 28%;
+    }
+
+    .mainCategory {
+        width: 50%;
     }
 
     .mainTitles {
         font-size: 2.0rem;
     }
-}
-
-@media (max-width: 1343px) {
-    main .mainBox .mainGrafic {
-        justify-content: space-between;
-    }  
-
-    main .mainBox div .table-sm {
-        font-size: 1.5rem;
-    }    
 
     .pie {
-        --w: 135px;
+        --w: 125px;
     }
 }
 
-@media (max-width: 1301px) {
+@media (max-width: 1380px) {
     .pie {
-        --w: 130px;
+        --w: 108px;
+    }
+
+    main .mainBox div .table-sm {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1311px) {
+    .mainBox {
+        width: 30%;
+    }
+
+    .mainCategory {
+        width: 50%;
+    }
+
+    .pie {
+        --w: 100px;
     }
 }
 
@@ -317,61 +334,111 @@ main .mainBox button:active {
     .mainBox {
         width: 32%;
     }
-    
-    .mainCategory {
-        width: 57%;
-    }
-    
-    .pie {
-        --w: 117px;
-    }
-}
 
-@media (max-width: 1220px) {
-    .mainBox {
-        width: 33%;
-    }
-    
     .mainCategory {
-        width: 56%;
+        width: 55%;
     }
-    
+
     .pie {
         --w: 110px;
     }
+
+    
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1206px) {
+    .pie {
+        --w: 105px;
+    }
+
+    .graficDatas h3 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 1173px) {
+    #container {
+        position: absolute;
+        top: 0;
+        left: 250px;
+        height: auto;
+    }
+
     main {
         width: 100%;
         height: 100%;
-        margin-top: 5%;
+        
         float: right;
-    
+
         display: flex;
         flex-direction: column-reverse;
-        justify-content: space-evenly;
         align-items: center;
     }
-}
 
-
-@media (max-width: 1107px) {
     .mainBox {
-        width: 33%;
-    }
-
-    main .mainBox .mainGrafic {
-        justify-content: none;
+        width:45%;
+        height: 420px;
     }
 
     .mainCategory {
-        width: 56%;
+        width: 80%;
+        margin-bottom: 5rem;
     }
 
     .pie {
         --w: 123px;
-        font-size: 22px;
+    }
+}
+
+@media (max-width: 1031px) {
+    .mainBox {
+        width: 50%;
+    }
+
+    .mainCategory {
+        width: 80%;
+    }
+
+    .pie {
+        --w: 113px;
+    }
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 56%;
+    }
+
+    .mainBox {
+        height: 391px;
+    }
+
+    main .mainBox div .table-sm {
+        line-height: 3.5rem;
+    
+        margin: 2.5rem auto;
+        width: 80%;
+        height: 49.5%;
+    }
+}
+
+@media (max-width: 925px) {
+    .pie {
+        --w: 96px;
+    }
+}
+
+@media (max-width: 840px) {
+    .mainBox {
+        width: 60%;
+    }
+
+    .mainCategory {
+        width: 80%;
+    }
+
+    .pie {
+        --w: 90px;
     }
 }
 
@@ -382,7 +449,7 @@ main .mainBox button:active {
         left: 0;
         width: 100vw;
     }
-    
+
     .sidebar.close~#container {
         top: 75px;
         left: 0;
@@ -394,7 +461,9 @@ main .mainBox button:active {
         font-weight: 500;
         font-family: 'Poppins', sans-serif;
         color: var(--text-color);
-    
+
         padding: 0rem 60px;
     }
+
+    
 }
