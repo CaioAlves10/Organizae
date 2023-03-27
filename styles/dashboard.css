@@ -574,4 +574,42 @@ main .mainBox button:active {
 
         padding: 0rem 60px;
     }
+
+    .pie {
+        --w: 75px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 450px) {
+    .pie {
+        --w: 70px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 340px) {
+    html {
+        font-size: 55%;
+    }
+
+    main .mainBox .mainGrafic {
+        height: 57%;
+    }
+
+    .pie {
+        --w: 64px;
+        font-size: 15px;
+    }
+
+
+}
+
+@media (max-width: 325px) {
+    main .mainBox div .table-sm {
+        font-size: 1.4rem;
+        line-height: 3.5rem;
+    
+        margin: 1.7rem auto;
+    }
 }
