@@ -16,6 +16,7 @@
     /* ===== Colors ===== */
     --text-color: #707070;
     --box-color: #FFF;
+    --subtitle-black-color: #18191a;
 
     --title: #707070;
     --sidebar-color: #FFF;
@@ -32,6 +33,8 @@ body {
 
 body.dark {
     --text-color: #ccc;
+    --box-color: #242526;
+    --subtitle-black-color: #ccc;
 
     --body-color: #18191a;
     --sidebar-color: #242526;
@@ -108,6 +111,7 @@ html {
 .balance .balanceBox .moneyBalance {
     font-size: 1.7rem;
     font-weight: bold;
+    color: var(--subtitle-black-color);
     margin-bottom: 0;
 }
 
@@ -141,12 +145,17 @@ main {
 /* TABLE */
 
 main .mainBox div .table-sm {
+    color: var(--subtitle-black-color);
     font-size: 1.6rem;
     line-height: 3.5rem;
 
     margin: 0.5rem auto 2.4rem;
     width: 80%;
     height: 49.5%;
+}
+
+main .mainBox div .table-sm .subTitleTable {
+    color: var(--subtitle-black-color);
 }
 
 /* GRAFIC */
@@ -185,6 +194,7 @@ main .mainBox .mainGrafic {
     display: inline-grid;
     margin: 5px;
     place-content: center;
+    color: var(--subtitle-black-color);
     font-size: 25px;
     font-weight: bold;
     font-family: sans-serif;
@@ -235,6 +245,7 @@ main .mainBox .mainGrafic {
 }
 
 .graficDatas h3 {
+    color: var(--subtitle-black-color);
     margin-bottom: 1rem;
 }
 
@@ -344,7 +355,7 @@ main .mainBox button:active {
 
     .pie {
         --w: 110px;
-    }    
+    }
 }
 
 @media (max-width: 1206px) {
@@ -380,22 +391,22 @@ main .mainBox button:active {
         width: 100%;
         height: 100%;
         margin-top: 4rem;
-        
+
         float: right;
 
         display: flex;
         flex-direction: column-reverse;
-        align-items: center;
     }
 
     .mainBox {
-        width:45%;
+        width: 45%;
         height: 400px;
+        margin: 0 10%;
     }
 
     .mainCategory {
         width: 80%;
-        margin-bottom: 5rem;
+        margin: 0 10% 5rem;
     }
 
     .pie {
@@ -420,7 +431,7 @@ main .mainBox button:active {
     .balance {
         width: 85%;
         margin: 0 7.3%;
-    
+
         display: flex;
         align-items: center;
         gap: 2rem;
@@ -444,7 +455,7 @@ main .mainBox button:active {
     main .mainBox div .table-sm {
         font-size: 1.5rem;
         line-height: 3.5rem;
-    
+
         margin: 2rem auto;
         width: 80%;
         height: 49.5%;
@@ -462,31 +473,33 @@ main .mainBox button:active {
         width: 100%;
         height: auto;
         margin: 0;
-    
+
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
     }
-    
+
     .balance .balanceBox {
         display: flex;
         align-items: center;
         flex-direction: row-reverse;
         justify-content: space-around;
-    
+
         width: 30rem;
         padding: 1.4rem 0rem;
     }
 }
 
-@media (max-width: 850px) { 
+@media (max-width: 850px) {
     .mainBox {
         width: 55%;
+        margin: 0 12.5%;
     }
 
     .mainCategory {
         width: 75%;
+        margin: 0 12.5% 5rem;
     }
 
     main .mainBox .mainGrafic {
@@ -494,8 +507,8 @@ main .mainBox button:active {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-    
-    
+
+
         background-color: transparent;
         margin: 2.5rem auto;
         width: 90%;
@@ -513,6 +526,12 @@ main .mainBox button:active {
         font-size: 58%;
     }
 
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
     .mainBox {
         width: 75%;
         height: 370px;
@@ -520,7 +539,7 @@ main .mainBox button:active {
 
     main .mainBox div .table-sm {
         line-height: 3.4rem;
-    
+
         margin: 1.7rem auto;
     }
 
@@ -535,13 +554,13 @@ main .mainBox button:active {
         --w: 70px;
         font-size: 17px;
     }
-    
+
     .balance .balanceBox {
         display: flex;
         align-items: center;
         flex-direction: row-reverse;
         justify-content: space-around;
-    
+
         width: 34rem;
         padding: 1.4rem 0rem;
     }
@@ -581,7 +600,7 @@ main .mainBox button:active {
     main .mainBox div .table-sm {
         font-size: 1.5rem;
         line-height: 3.5rem;
-    
+
         margin: 1.7rem auto;
     }
 }
@@ -621,7 +640,7 @@ main .mainBox button:active {
         align-items: center;
         flex-direction: row-reverse;
         justify-content: space-between;
-    
+
         width: 80%;
         padding: 1.4rem 5rem;
     }
@@ -631,6 +650,12 @@ main .mainBox button:active {
     .pie {
         --w: 70px;
         font-size: 17px;
+    }
+}
+
+@media (max-width: 450px) {
+    .balance .balanceBox img {
+        width: 5rem;
     }
 }
 
@@ -647,13 +672,17 @@ main .mainBox button:active {
         --w: 64px;
         font-size: 15px;
     }
+
+    .balance .balanceBox {
+        padding: 1.4rem 4rem;
+    }
 }
 
 @media (max-width: 325px) {
     main .mainBox div .table-sm {
         font-size: 1.4rem;
         line-height: 3.5rem;
-    
+
         margin: 1.7rem auto;
     }
 }
