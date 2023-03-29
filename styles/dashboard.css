@@ -16,6 +16,7 @@
     /* ===== Colors ===== */
     --text-color: #707070;
     --box-color: #FFF;
+    --subtitle-black-color: #18191a;
 
     --title: #707070;
     --sidebar-color: #FFF;
@@ -32,6 +33,8 @@ body {
 
 body.dark {
     --text-color: #ccc;
+    --box-color: #242526;
+    --subtitle-black-color: #ccc;
 
     --body-color: #18191a;
     --sidebar-color: #242526;
@@ -108,13 +111,15 @@ html {
 .balance .balanceBox .moneyBalance {
     font-size: 1.7rem;
     font-weight: bold;
+    color: var(--subtitle-black-color);
     margin-bottom: 0;
 }
 
 main {
     width: 100%;
     height: 52%;
-    margin-top: 8rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
     float: right;
 
     display: flex;
@@ -129,8 +134,8 @@ main {
 }
 
 .mainBox {
-    width: 40rem;
-    height: 43rem;
+    width: 30%;
+    height: 400px;
 
     background: var(--box-color);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -140,18 +145,23 @@ main {
 /* TABLE */
 
 main .mainBox div .table-sm {
+    color: var(--subtitle-black-color);
     font-size: 1.6rem;
     line-height: 3.5rem;
 
-    margin: 2rem auto 2.4rem;
+    margin: 0.5rem auto 2.4rem;
     width: 80%;
     height: 49.5%;
+}
+
+main .mainBox div .table-sm .subTitleTable {
+    color: var(--subtitle-black-color);
 }
 
 /* GRAFIC */
 
 .mainCategory {
-    width: 80rem;
+    width: 60%;
 }
 
 main .mainBox .mainGrafic {
@@ -184,6 +194,7 @@ main .mainBox .mainGrafic {
     display: inline-grid;
     margin: 5px;
     place-content: center;
+    color: var(--subtitle-black-color);
     font-size: 25px;
     font-weight: bold;
     font-family: sans-serif;
@@ -234,6 +245,7 @@ main .mainBox .mainGrafic {
 }
 
 .graficDatas h3 {
+    color: var(--subtitle-black-color);
     margin-bottom: 1rem;
 }
 
@@ -246,7 +258,7 @@ main .mainBox .mainGrafic {
 
 main .mainBox button {
     width: 90%;
-    margin: 1rem 5% 0;
+    margin: 0 5%;
     padding: 1rem 2rem;
 
     font-family: 'Open Sans', sans-serif;
@@ -279,21 +291,332 @@ main .mainBox button:active {
     box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
 }
 
+
+/* MEDIA QUERY */
+
+@media (max-width: 1440px) {
+    .mainBox {
+        width: 28%;
+    }
+
+    .mainCategory {
+        width: 50%;
+    }
+
+    .mainTitles {
+        font-size: 2.0rem;
+    }
+
+    .pie {
+        --w: 125px;
+    }
+}
+
+@media (max-width: 1380px) {
+    .pie {
+        --w: 108px;
+    }
+
+    main {
+        margin-top: 2.5%;
+    }
+
+    main .mainBox div .table-sm {
+        font-size: 1.4rem;
+    }
+
+    #FirstTitle {
+        padding: 4rem 60px 2rem;
+    }
+}
+
+@media (max-width: 1311px) {
+    .mainBox {
+        width: 30%;
+    }
+
+    .mainCategory {
+        width: 50%;
+    }
+
+    .pie {
+        --w: 100px;
+    }
+}
+
+@media (max-width: 1240px) {
+    .mainBox {
+        width: 32%;
+    }
+
+    .mainCategory {
+        width: 55%;
+    }
+
+    .pie {
+        --w: 110px;
+    }
+}
+
+@media (max-width: 1206px) {
+    .pie {
+        --w: 105px;
+    }
+
+    .graficDatas h3 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 1173px) {
+    #container {
+        position: absolute;
+        top: 0;
+        left: 250px;
+        height: auto;
+    }
+
+    .sidebar.close~#container {
+        left: 78px;
+        height: auto;
+        width: calc(100% - 78px);
+    }
+
+    #FirstTitle {
+        padding: 4rem 60px;
+        margin: 0;
+    }
+
+    main {
+        width: 100%;
+        height: 100%;
+        margin-top: 4rem;
+
+        float: right;
+
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .mainBox {
+        width: 45%;
+        height: 400px;
+        margin: 0 10%;
+    }
+
+    .mainCategory {
+        width: 80%;
+        margin: 0 10% 5rem;
+    }
+
+    .pie {
+        --w: 123px;
+    }
+}
+
+@media (max-width: 1031px) {
+    .mainBox {
+        width: 50%;
+    }
+
+    .mainCategory {
+        width: 80%;
+    }
+
+    .pie {
+        --w: 113px;
+        font-size: 23px;
+    }
+
+    .balance {
+        width: 85%;
+        margin: 0 7.3%;
+
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .balance .balanceBox {
+        width: 20rem;
+        padding: 1.3rem 0rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 59%;
+    }
+
+    .mainBox {
+        height: 390px;
+    }
+
+    main .mainBox div .table-sm {
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+
+        margin: 2rem auto;
+        width: 80%;
+        height: 49.5%;
+    }
+
+}
+
+@media (max-width: 925px) {
+    .pie {
+        --w: 96px;
+        font-size: 21px;
+    }
+
+    .balance {
+        width: 100%;
+        height: auto;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .balance .balanceBox {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+
+        width: 30rem;
+        padding: 1.4rem 0rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .mainBox {
+        width: 55%;
+        margin: 0 12.5%;
+    }
+
+    .mainCategory {
+        width: 75%;
+        margin: 0 12.5% 5rem;
+    }
+
+    main .mainBox .mainGrafic {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+
+        background-color: transparent;
+        margin: 2.5rem auto;
+        width: 90%;
+        height: 55.5%;
+    }
+
+    .pie {
+        --w: 90px;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 790px) {
+    html {
+        font-size: 58%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .mainBox {
+        width: 75%;
+        height: 370px;
+    }
+
+    main .mainBox div .table-sm {
+        line-height: 3.4rem;
+
+        margin: 1.7rem auto;
+    }
+
+    .pie {
+        --w: 80px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+    .pie {
+        --w: 70px;
+        font-size: 17px;
+    }
+
+    .balance .balanceBox {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+
+        width: 34rem;
+        padding: 1.4rem 0rem;
+    }
+}
+
+@media (max-width: 665px) {
+    .mainBox {
+        width: 80%;
+        height: 365px;
+    }
+
+    .mainTitles {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 615px) {
+    .pie {
+        --w: 67px;
+        font-size: 16px;
+    }
+
+    .mainTitles {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 610px) {
+    html {
+        font-size: 56%;
+    }
+
+    .mainBox {
+        height: 355px;
+    }
+
+    main .mainBox div .table-sm {
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+
+        margin: 1.7rem auto;
+    }
+}
+
 @media (max-width: 600px) {
     #container {
         position: absolute;
         top: 75px;
         left: 0;
         width: 100vw;
-        /* left: 250px; */
-        /* height: calc(100% - 250px); */
     }
-    
+
     .sidebar.close~#container {
         top: 75px;
         left: 0;
         width: 100vw;
-        /* height: calc(100% - 78px); */
     }
 
     #FirstTitle {
@@ -301,7 +624,65 @@ main .mainBox button:active {
         font-weight: 500;
         font-family: 'Poppins', sans-serif;
         color: var(--text-color);
-    
-        padding: 0rem 60px;
+
+        padding: 4rem 60px 2rem;
+    }
+
+    .pie {
+        --w: 75px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .balance .balanceBox {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        width: 80%;
+        padding: 1.4rem 5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .pie {
+        --w: 70px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 450px) {
+    .balance .balanceBox img {
+        width: 5rem;
+    }
+}
+
+@media (max-width: 340px) {
+    html {
+        font-size: 55%;
+    }
+
+    main .mainBox .mainGrafic {
+        height: 57%;
+    }
+
+    .pie {
+        --w: 64px;
+        font-size: 15px;
+    }
+
+    .balance .balanceBox {
+        padding: 1.4rem 4rem;
+    }
+}
+
+@media (max-width: 325px) {
+    main .mainBox div .table-sm {
+        font-size: 1.4rem;
+        line-height: 3.5rem;
+
+        margin: 1.7rem auto;
     }
 }
