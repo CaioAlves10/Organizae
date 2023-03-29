@@ -17,13 +17,6 @@
     --text-color: #707070;
     --box-color: #FFF;
     --subtitle-black-color: #18191a;
-
-    --title: #707070;
-    --sidebar-color: #FFF;
-    --primary-color: #87AFE8;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --icon-color: #FFF;
 }
 
 body {
@@ -35,13 +28,6 @@ body.dark {
     --text-color: #ccc;
     --box-color: #242526;
     --subtitle-black-color: #ccc;
-
-    --body-color: #18191a;
-    --sidebar-color: #242526;
-    --primary-color: #3a3b3c;
-    --primary-color-light: #3a3b3c;
-    --toggle-color: #fff;
-    --icon-color: #FFF;
 }
 
 html {
