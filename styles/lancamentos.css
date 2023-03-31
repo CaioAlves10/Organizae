@@ -19,11 +19,11 @@
     color: #F5F5F5;
     font-size: 20px;
 }
-.img-filter{
+/* .img-filter{
     border-radius: 100%;
     padding: 4px;
     background-color: #EDEDED;
-}
+} */
 .boxes{
     display: flex;
     flex-direction: row;
@@ -60,6 +60,9 @@
 }
 .table{
     background-color: #F5F5F5;
+}
+td, th{
+    padding: 8px;
 }
 main {
     position: absolute;
@@ -138,8 +141,14 @@ main {
         font-size: 12px;
         padding: 10px 9px 0px 9px;
     }
+    .img-boxes{
+        max-width: 40px; max-height: 40px;
+    }
     .boxes{
         margin-right: 17%;
+    }
+    td, th{
+        padding: 5px;
     }
     .table{
         font-size: 15px;
@@ -152,11 +161,34 @@ main {
         font-size: 12px;
         margin-left: 20px;
     }
+    .boxes{
+        margin-left: 50%;
+    }
     .table{
-        max-width: 20%;
-        font-size: 15px;
+        font-size: 12px;
         padding: 20px;
         margin-left: 150px;
     }
+    td, th{
+        padding: 5px;
+    }
+}
+@media (max-width: 375px){
+    .mini-box{
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    .boxes{
+        margin-left: 60%;
+        margin-right: 60%;
+    }
+    .table{
+        font-size: 11px;
+        padding: 20px;
+        margin-left: 120px;
+    }
+    td, th{
+        padding: 4px;
+    }   
 }
 
